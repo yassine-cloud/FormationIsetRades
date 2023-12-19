@@ -1,1 +1,64 @@
 /* You can add global styles to this file, and also import other style files */
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url(assets/img/Rayons_de_soleil_penetrant_la_foret.JPG);
+    backdrop-filter: blur(4px);
+}
+
+input.ng-invalid.ng-touched{
+    border: 1px solid red;
+  }
+  input.ng-valid.ng-touched{
+    border: 1px solid green;
+  }
+  
+  .error{
+    color: red;
+    font-size: smaller;
+  }
+
+  /* body */
+  .container-body {
+    margin: 8px 5px;
+    background-color: rgba(121, 121, 121, 0.627);
+    backdrop-filter: blur(5px);
+    padding: 25px 15px;
+    border-radius: 20px;
+    color: #fff; 
+  }
+
+
+ 
+
+  /* images des cards */
+
+
+.card-img-top {
+  max-height: 350px;
+}
+
+.big-card-img-top {
+  max-width: 500px;
+  margin: 10px auto 0px;
+  border-radius: 15px;
+}
+
+.card {
+  min-width: 370px;
+  max-width: 600px;
+  margin: auto;
+}
+.big-card{
+  max-width: 750px;
+  min-width: 350px;
+}
+
+/* pop up modal */
+
+.pop-up-backdrop {
+  background-color: rgb(0, 0, 0);  
+}

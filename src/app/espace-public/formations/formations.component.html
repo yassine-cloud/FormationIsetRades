@@ -1,0 +1,150 @@
+<section class="search">
+    <h2 class="display-4">Recherchez une formation</h2>
+
+      <div class="form-floating" style="min-width: 350px;max-width: 400px;color: grey;">
+        <input type="text" class="form-control rounded-3" id="floatingInputmc" placeholder="Mots-clés">
+        <label for="floatingInputmc">Mots-clés</label>
+      </div>
+      
+
+      <div class="mt-2">
+      Ou bien  <button class="btn btn-outline-info" (click)="openPopup(depform)" type="button"> Déposer une demande</button>
+    </div>
+</section>
+
+<!--  -->
+<h2 class="display-4 my-2" >Formations en vedette</h2>
+  <div class="row row-cols g-4 p-auto" >
+
+   
+
+    <div class="col">
+        <div class="card h-100">
+          <img src="../../../assets/formation-img/Python-for-data-science-in-kenya.png" class="card-img-top" alt="Skyscrapers"/>
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">
+              This is a wider card with supporting text below as a natural lead-in to
+              additional content. This content is a little bit longer.
+            </p>
+          </div>
+          <div class="card-footer">
+              <a routerLink="/public/detail" >En savoir plus</a>
+            <small class="text-muted">Last updated 3 mins ago</small>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card h-100">
+          <img src="../../../assets/formation-img/Graphic Design Fundamentals.jpg" class="card-img-top" alt="Skyscrapers"/>
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">
+              This is a wider card with supporting text below as a natural lead-in to
+              additional content. This content is a little bit longer.
+            </p>
+          </div>
+          <div class="card-footer">
+              <a href="/formations/3" >En savoir plus</a>
+            <small class="text-muted">Last updated 3 mins ago</small>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card h-100">
+          <img src="../../../assets/formation-img/formation-javascript-logo.jpg" class="card-img-top" alt="Skyscrapers"/>
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">
+              This is a wider card with supporting text below as a natural lead-in to
+              additional content. This content is a little bit longer.
+            </p>
+          </div>
+          <div class="card-footer">
+              <a href="/formations/3" >En savoir plus</a>
+            <small class="text-muted">Last updated 3 mins ago</small>
+          </div>
+        </div>
+      </div>
+    
+    <div class="col">
+      <div class="card h-100">
+        <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/044.webp" class="card-img-top" alt="Skyscrapers"/>
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">
+            This is a wider card with supporting text below as a natural lead-in to
+            additional content. This content is a little bit longer.
+          </p>
+        </div>
+        <div class="card-footer">
+            <a href="/formations/3" >En savoir plus</a>
+          <small class="text-muted">Last updated 3 mins ago</small>
+        </div>
+      </div>
+    </div>
+    
+    
+    <div class="col">
+      <div class="card h-100">
+        <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/043.webp" class="card-img-top" alt="Los Angeles Skyscrapers"/>
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+        </div>
+        <div class="card-footer">
+          <small class="text-muted">Last updated 3 mins ago</small>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card h-100">
+        <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/042.webp" class="card-img-top" alt="Palm Springs Road"/>
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">
+            This is a wider card with supporting text below as a natural lead-in to
+            additional content. This card has even longer content than the first to show
+            that equal height action.
+          </p>
+        </div>
+        <div class="card-footer">
+          <small class="text-muted">Last updated 3 mins ago</small>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <!-- pop up deposer une formation -->
+
+  <ng-template #depform let-modal>
+          
+    <div class="modal-content">
+      <div class="modal-header p-5 pb-4 border-bottom-0">
+        <h1 class="fw-bold mb-0 fs-2">Demande d'une formation</h1>
+        <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+      </div>
+    
+      <div class="modal-body p-5 pt-0">
+        
+        <form class="">
+          <div class="form-floating mb-3">
+            <input type="email" class="form-control rounded-3" id="floatingInput" placeholder="Objet">
+            <label for="floatingInput">Objet</label>
+          </div>
+          <div class=" mb-3">
+            <textarea class="form-control rounded-3" cols="30" rows="10" placeholder="Explication de la demande"></textarea>
+            <!-- <input type="" class="form-control rounded-3" id="floatingPassword" placeholder="Password"> -->
+          </div>
+          <button class="w-100 mb-2 btn btn-lg rounded-3 btn-primary" type="submit">Envoyer</button>
+
+        </form>
+      </div>
+    </div> 
+  </ng-template>
+  

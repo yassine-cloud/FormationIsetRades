@@ -1,0 +1,343 @@
+{
+  "Formateurs": [
+    {
+      "nom": "Doee",
+      "prenom": "John",
+      "numeroCarteIdentite": "ABC123XYZ",
+      "email": "john.doe@example.com",
+      "motDePasse": "securePassword123",
+      "numeroTelephone": "+1234567890",
+      "specialites": [
+        {
+          "libelle": "Web Development"
+        },
+        {
+          "libelle": "JavaScript"
+        }
+      ],
+      "id": 1
+    },
+    {
+      "id": 2,
+      "nom": "Smith",
+      "prenom": "Jane",
+      "email": "jane.smith@example.com",
+      "numeroCarteIdentite": "DEF456UVW",
+      "motDePasse": "strongPassword789",
+      "numeroTelephone": "+9876543210",
+      "specialites": [
+        {
+          "libelle": "Data Science"
+        },
+        {
+          "libelle": "Python"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "nom": "Johnson",
+      "prenom": "Bob",
+      "email": "bob.johnson@example.com",
+      "numeroCarteIdentite": "GHI789JKL",
+      "motDePasse": "password123",
+      "numeroTelephone": "+1122334455",
+      "specialites": [
+        {
+          "libelle": "Graphic Design"
+        },
+        {
+          "libelle": "Adobe Illustrator"
+        }
+      ]
+    },
+    {
+      "nom": "Mtir",
+      "prenom": "Mehdi",
+      "numeroCarteIdentite": "GHI752JKL",
+      "email": "Mmtir@email.com",
+      "motDePasse": "2023",
+      "numeroTelephone": "+21693565345",
+      "specialites": [
+        {
+          "libelle": "Angular"
+        },
+        {
+          "libelle": "Java"
+        },
+        {
+          "libelle": "Bootstrap"
+        },
+        {
+          "libelle": "JavaScript"
+        },
+        {
+          "libelle": "FullStack"
+        },
+        {
+          "libelle": "Python"
+        }
+      ],
+      "id": 5
+    }
+  ],
+  "Candidats": [
+    {
+      "nom": "Doee",
+      "prenom": "Alice",
+      "numeroCarteIdentite": "XYZ789ABC",
+      "email": "alice.doe@example.com",
+      "motDePasse": "securePassword456",
+      "id": 1
+    },
+    {
+      "id": 2,
+      "nom": "Smith",
+      "prenom": "Bob",
+      "email": "bob.smith@example.com",
+      "numeroCarteIdentite": "ABC456XYZ",
+      "motDePasse": "strongPassword123"
+    },
+    {
+      "id": 3,
+      "nom": "Johnson",
+      "prenom": "Eva",
+      "email": "eva.johnson@example.com",
+      "numeroCarteIdentite": "DEF123UVW",
+      "motDePasse": "password789"
+    },
+    {
+      "id": 4,
+      "nom": "Brown",
+      "prenom": "Alex",
+      "email": "alex.brown@example.com",
+      "numeroCarteIdentite": "GHI789JKL",
+      "motDePasse": "pass123"
+    },
+    {
+      "id": 5,
+      "nom": "Garcia",
+      "prenom": "Maria",
+      "email": "maria.garcia@example.com",
+      "numeroCarteIdentite": "JKL789MNO",
+      "motDePasse": "securePass789"
+    },
+    {
+      "id": 6,
+      "nom": "Chen",
+      "prenom": "Wei",
+      "email": "wei.chen@example.com",
+      "numeroCarteIdentite": "PQR123XYZ",
+      "motDePasse": "securePass456"
+    },
+    {
+      "id": 7,
+      "nom": "Kim",
+      "prenom": "Minho",
+      "email": "minho.kim@example.com",
+      "numeroCarteIdentite": "STU456ABC",
+      "motDePasse": "strongPassword789"
+    },
+    {
+      "id": 8,
+      "nom": "Gupta",
+      "prenom": "Sanya",
+      "email": "sanya.gupta@example.com",
+      "numeroCarteIdentite": "VWX789DEF",
+      "motDePasse": "password123"
+    },
+    {
+      "id": 9,
+      "nom": "Martinez",
+      "prenom": "Juan",
+      "email": "juan.martinez@example.com",
+      "numeroCarteIdentite": "YZA789BCD",
+      "motDePasse": "pass456"
+    },
+    {
+      "id": 10,
+      "nom": "Aoki",
+      "prenom": "Haruka",
+      "email": "haruka.aoki@example.com",
+      "numeroCarteIdentite": "EFG789HIJ",
+      "motDePasse": "securePass789"
+    },
+    {
+      "id": 11,
+      "nom": "Lopez",
+      "prenom": "Miguel",
+      "email": "miguel.lopez@example.com",
+      "numeroCarteIdentite": "KLM789NOP",
+      "motDePasse": "strongPassword123"
+    },
+    {
+      "id": 12,
+      "nom": "Wang",
+      "prenom": "Yi",
+      "email": "yi.wang@example.com",
+      "numeroCarteIdentite": "QRS123TUV",
+      "motDePasse": "password789"
+    },
+    {
+      "id": 13,
+      "nom": "Park",
+      "prenom": "Hyejin",
+      "email": "hyejin.park@example.com",
+      "numeroCarteIdentite": "UVW456XYZ",
+      "motDePasse": "pass123"
+    },
+    {
+      "id": 14,
+      "nom": "Singh",
+      "prenom": "Raj",
+      "email": "raj.singh@example.com",
+      "numeroCarteIdentite": "ABC789DEF",
+      "motDePasse": "securePassword456"
+    },
+    {
+      "id": 15,
+      "nom": "Kawasaki",
+      "prenom": "Yuki",
+      "email": "yuki.kawasaki@example.com",
+      "numeroCarteIdentite": "GHI123JKL",
+      "motDePasse": "strongPass789"
+    },
+    {
+      "id": 16,
+      "nom": "Saadaoui",
+      "prenom": "Yassine",
+      "email": "Saadaoui@example.com",
+      "numeroCarteIdentite": "YANKEE16",
+      "motDePasse": "2023"
+    }
+  ],
+  "Formations": [
+    {
+      "id": 1,
+      "titre": "Formation JavaScript",
+      "description": "Introduction to JavaScript programming language",
+      "chargeHoraire": 40,
+      "programme": "Week 1: Basics, Week 2: Functions, Week 3: DOM manipulation",
+      "niveauDifficulte": "intermédiaire",
+      "motsCles": [
+        "JavaScript",
+        "Programming",
+        "Web Development"
+      ],
+      "categories": [
+        "Programming",
+        "Web Development"
+      ]
+    },
+    {
+      "id": 2,
+      "titre": "Python for Data Science",
+      "description": "Comprehensive course on using Python for data analysis and machine learning",
+      "chargeHoraire": 60,
+      "programme": "Week 1: Python Basics, Week 2: Data Manipulation with Pandas, Week 3: Machine Learning with scikit-learn",
+      "niveauDifficulte": "avancé",
+      "motsCles": [
+        "Python",
+        "Data Science",
+        "Machine Learning"
+      ],
+      "categories": [
+        "Programming",
+        "Data Science"
+      ]
+    },
+    {
+      "id": 3,
+      "titre": "Graphic Design Fundamentals",
+      "description": "Learn the basics of graphic design, including principles of color, typography, and layout",
+      "chargeHoraire": 30,
+      "programme": "Week 1: Introduction to Design Principles, Week 2: Color Theory, Week 3: Typography and Layout",
+      "niveauDifficulte": "intermédiaire",
+      "motsCles": [
+        "Graphic Design",
+        "Design Principles",
+        "Typography"
+      ],
+      "categories": [
+        "Design",
+        "Digital Arts"
+      ]
+    },
+    {
+      "id": 4,
+      "titre": "Introduction to Cybersecurity",
+      "description": "Explore the fundamentals of cybersecurity, including network security and ethical hacking",
+      "chargeHoraire": 45,
+      "programme": "Week 1: Basics of Cybersecurity, Week 2: Network Security, Week 3: Ethical Hacking",
+      "niveauDifficulte": "intermédiaire",
+      "motsCles": [
+        "Cybersecurity",
+        "Ethical Hacking",
+        "Network Security"
+      ],
+      "categories": [
+        "IT Security",
+        "Technology"
+      ]
+    }
+  ],
+  "SessionFormation": [
+    {
+      "id": 1,
+      "formation": 1,
+      "formateurs": [
+        1,
+        2
+      ],
+      "candidats": [
+        1,
+        2
+      ],
+      "dateDebut": "2023-01-15T09:00:00Z",
+      "dateFin": "2023-02-28T17:00:00Z",
+      "planningSeances": [
+        "Session 1: Introduction to Web Development, HTML Basics - Date: 2023-01-15, Time: 09:00 AM - 12:00 PM, Location: Room A",
+        "Session 2: CSS Fundamentals - Date: 2023-01-17, Time: 09:00 AM - 12:00 PM, Location: Room B",
+        "Session 3: JavaScript Introduction - Date: 2023-01-20, Time: 09:00 AM - 12:00 PM, Location: Room C"
+      ]
+    },
+    {
+      "id": 2,
+      "formation": 2,
+      "formateurs": [
+        3
+      ],
+      "candidats": [
+        5,
+        7,
+        9
+      ],
+      "dateDebut": "2023-05-01T10:30:00Z",
+      "dateFin": "2023-06-15T16:30:00Z",
+      "planningSeances": [
+        "Session 1: Graphic Design Principles - Date: 2023-05-01, Time: 10:30 AM - 01:30 PM, Location: Design Studio",
+        "Session 2: Color Theory Workshop - Date: 2023-05-03, Time: 10:30 AM - 01:30 PM, Location: Design Lab"
+      ]
+    },
+    {
+      "id": 3,
+      "formation": 3,
+      "formateurs": [
+        1,
+        2
+      ],
+      "candidats": [
+        1,
+        2,
+        3
+      ],
+      "dateDebut": "2023-03-01T09:00:00Z",
+      "dateFin": "2023-04-15T17:00:00Z",
+      "planningSeances": [
+        "Session 1: Introduction to Data Science - Date: 2023-03-01, Time: 09:00 AM - 12:00 PM, Location: Room A",
+        "Session 2: Data Analysis with Python - Date: 2023-03-03, Time: 09:00 AM - 12:00 PM, Location: Room B"
+      ]
+    }
+  ],
+  "users": []
+}

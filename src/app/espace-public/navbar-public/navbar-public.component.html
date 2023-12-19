@@ -1,0 +1,90 @@
+<nav  style="opacity: 0.90;border-bottom-left-radius: 15px ;border-bottom-right-radius: 15px ;" class="navbar navbar-expand-lg py-2 bg-info"    >
+  <div class="container-fluid">
+    <a class="navbar-brand " routerLink="">Gestion des sessions de formations</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="true" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarColor01">
+      <ul class="navbar-nav ms-auto">
+          
+        <li class="nav-item">
+          <a class="nav-link " routerLink="/public/acceuil"  routerLinkActive="active-link" [routerLinkActiveOptions]='{exact:true}' >Acceuil
+          </a>
+        </li>
+        
+        <li class="nav-item" >
+          <a class="nav-link " routerLink="/public/formations"  routerLinkActive="active-link" [routerLinkActiveOptions]='{exact:true}' >Formations
+          </a>
+        </li>
+
+
+
+        <!-- <li class="nav-item">
+          <a class="nav-link " routerLink=""  routerLinkActive="active-link" [routerLinkActiveOptions]='{exact:true}' >Espace Candidats
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " routerLink=""  routerLinkActive="active-link" [routerLinkActiveOptions]='{exact:true}' >Espace Formateurs
+          </a>
+        </li> -->
+
+        <li class="nav-item">
+          <a class="btn btn-outline-success mx-auto" (click)="openPopup(login)" >Login
+          </a>
+        
+          <a class="btn btn-outline-secondary mx-2 "  >Sign up
+          </a>
+        </li>
+        </ul>
+    </div>
+  </div>
+</nav>
+
+
+
+<!-- interface login -->
+
+<ng-template #login let-modal>
+          
+  <div class="modal-content">
+    <div class="modal-header p-5 pb-4 border-bottom-0">
+      <h1 class="fw-bold mb-0 fs-2">Log-in</h1>
+      <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+    </div>
+  
+    <div class="modal-body p-5 pt-0">
+      
+      <form class="">
+        <div class="form-floating mb-3">
+          <input type="email" class="form-control rounded-3" id="floatingInput" placeholder="name@example.com">
+          <label for="floatingInput">Email address</label>
+        </div>
+        <div class="form-floating mb-3">
+          <input type="password" class="form-control rounded-3" id="floatingPassword" placeholder="Password">
+          <label for="floatingPassword">Password</label>
+        </div>
+        <button class="w-100 mb-2 btn btn-lg rounded-3 btn-primary" type="submit">Log-in</button>
+
+        <!-- <small class="text-body-secondary">By clicking Sign up, you agree to the terms of use.</small>  -->
+        <!-- <br>
+        <button type="button" class="btn btn-secondary" (click)="modal.close('Close click')">Close</button> -->
+
+        <hr class="my-4">
+        <h2 class="fs-5 fw-bold mb-3">Or sign-up</h2>
+        <button class="w-100 py-2 mb-2 btn btn-outline-secondary rounded-3" type="submit">
+          Sign up as Candidat
+        </button>
+        <button class="w-100 py-2 mb-2 btn btn-outline-primary rounded-3" type="submit">
+          Sign up as Formateur
+        </button>
+      </form>
+    </div>
+  </div> 
+</ng-template>
+
+
+<!-- interface sign up -->
+
+
+
+
