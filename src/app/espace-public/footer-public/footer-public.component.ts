@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, TemplateRef, inject } from '@angular/core';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-footer-public',
@@ -6,5 +7,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./footer-public.component.css']
 })
 export class FooterPublicComponent {
+
+
+  // pop up view
+  private modalService = inject(NgbModal);
+
+  openPopup(content : TemplateRef<any>){
+    this.modalService.open(content , {backdropClass : 'pop-up-backdrop' })
+  }
+
+  //////////////////////////////////////////////////////////////////
 
 }

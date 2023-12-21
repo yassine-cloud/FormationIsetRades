@@ -1,0 +1,51 @@
+<form  >
+
+    <div>
+        <label for="titre">titre:</label>
+        <input type="text" id="titre" name="titre" formControlName="titre" class=" form-control" >
+      </div>
+    
+      <div>
+        <label for="description">description:</label>
+        <input type="text" id="description" name="description"  formControlName="description" class=" form-control" >
+      </div>
+    
+      <div>
+        <label for="chargeHoraire">chargeHoraire:</label>
+        <input type="text" id="chargeHoraire" name="chargeHoraire" formControlName="chargeHoraire"  class=" form-control" >
+      </div>
+
+      <div>
+        <label for="programme">programme:</label>
+        <input type="email" id="programme" name="programme" formControlName="programme" class=" form-control" >
+      </div>
+
+      <div >
+        <label >motsCles :</label>
+        <input type="text" id="motsCles" name="motsCles" formControlName="motsCles" class=" form-control" >
+        <!-- <span class="error" *ngIf="form.get('motsCles')?.value=='' && form.get('motsCles')?.touched ">Vos Specialites sont obligatoire <br></span>
+        <span class="error" *ngIf="form.get('motsCles')?.invalid && form.get('motsCles')?.touched">Vos Specialites doit etre separee par une ,</span> -->
+      </div>
+
+      <div >
+        <label >categories :</label>
+        <input type="text" id="categories" name="categories" formControlName="categories" class=" form-control" >
+        <!-- <span class="error" *ngIf="form.get('categories')?.value=='' && form.get('categories')?.touched ">Vos Specialites sont obligatoire <br></span>
+        <span class="error" *ngIf="form.get('categories')?.invalid && form.get('categories')?.touched">Vos Specialites doit etre separee par une ,</span> -->
+      </div>
+
+      <div class="input-group dynamic-input my-3">
+        <label for="niveauDifficulte" class="input-group-text" >niveauDifficulte:</label>
+        <select name="niveauDifficulte" id="niveauDifficulte" formControlName="niveauDifficulte" class="form-select">
+            <option value="" selected hidden>Choisir...</option>
+            <option value="débutant">débutant</option>
+            <option value="intermédiaire">intermédiaire</option>
+            <option value="avancé">avancé</option>
+        </select>
+      </div>
+    
+      <button type="submit" class="btn form-control btn-success mt-3" >Submit</button>
+    
+
+
+</form>

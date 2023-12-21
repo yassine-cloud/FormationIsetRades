@@ -9,9 +9,43 @@
 
     
 
-    <ul class="container text-center text-muted" >
-        <b>Dev :</b> <br>
+    <ul class="container text-center text-muted" > 
+        <b (click)="openPopup(loginadmin)" >Dev :</b> 
+        <br>
         Saadaoui Yassine : saadaouiy51@gmail.com <br>
-
+      
      </ul>
   </footer>
+
+
+
+  <!-- interface login -->
+
+<ng-template #loginadmin let-modal>
+          
+  <div class="modal-content">
+    <div class="modal-header p-5 pb-4 border-bottom-0">
+      <h1 class="fw-bold mb-0 fs-2">Admin</h1>
+      <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+    </div>
+  
+    <div class="modal-body p-5 pt-0">
+      
+      <form class="">
+        <div class="form-floating mb-3">
+          <input type="email" class="form-control rounded-3" id="floatingInput" placeholder="name@example.com">
+          <label for="floatingInput">Email address</label>
+        </div>
+        <div class="form-floating mb-3">
+          <input type="password" class="form-control rounded-3" id="floatingPassword" placeholder="Password">
+          <label for="floatingPassword">Password</label>
+        </div>
+        <button class="w-100 mb-2 btn btn-lg rounded-3 btn-primary" type="submit">Log-in</button>
+
+        <!-- <small class="text-body-secondary">By clicking Sign up, you agree to the terms of use.</small>  -->
+        <!-- <br>
+        <button type="button" class="btn btn-secondary" (click)="modal.close('Close click')">Close</button> -->
+      </form>
+    </div>
+  </div> 
+</ng-template>

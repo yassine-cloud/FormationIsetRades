@@ -13,6 +13,7 @@ import { NavbarPublicComponent } from './espace-public/navbar-public/navbar-publ
 import { AcceuilComponent } from './espace-public/acceuil/acceuil.component';
 import { FormationsComponent } from './espace-public/formations/formations.component';
 import { DetailFormationComponent } from './espace-public/detail-formation/detail-formation.component';
+import { SignUpComponent } from './espace-public/sign-up/sign-up.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { DetailFormationComponent } from './espace-public/detail-formation/detai
     ContainerComponent,
     AcceuilComponent,
     FormationsComponent,
-    DetailFormationComponent
+    DetailFormationComponent,
+    SignUpComponent,
   ],
   imports: [
     BrowserModule,

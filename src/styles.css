@@ -62,3 +62,35 @@ input.ng-invalid.ng-touched{
 .pop-up-backdrop {
   background-color: rgb(0, 0, 0);  
 }
+
+/* inputs */
+
+form {
+  text-align: -webkit-center;
+}
+
+
+.form-control , .dynamic-input {
+  /* min-width: 350px; */
+  max-width: 500px;
+  /* color: grey; */
+}
+
+
+/* des tables */
+
+.table-responsives , .table-responsives-md ,.table-responsives-sm{
+  overflow-y: hidden;
+}
+
+*, ::after, ::before {
+  box-sizing: border-box;
+}
+
+.table-responsives-md::after {
+  display: block;
+  clear: both;
+  content: "";
+}
+
+/* */

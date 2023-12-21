@@ -1,0 +1,84 @@
+<h2>Liste des formations</h2>
+<button class="btn btn-success mb-3" [routerLink]="['/admin', 'ajouter-formation']">Ajouter une Formation</button>
+
+<div class="table-responsives-md">
+
+<table class="table table-striped ">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Nom</th>
+      <th scope="col">Prenom</th>
+      <th scope="col">Email</th>
+      <th scope="col">Téléphone</th>
+      <th scope="col">Editer</th>
+      <th scope="col">Supprimer</th>
+      <th scope="col">Details</th>
+
+    </tr>
+  </thead>
+  <tbody>
+    <tr >
+      <th scope="row">formateur</th>
+      <td>formateur</td>
+      <td>formateur</td>
+      <td>formateur</td>
+      <td>formateur</td>
+      <td><button class="btn btn-primary" >Editer</button></td>
+
+      <td><button class="btn btn-danger" >Supprimer</button></td>
+      <td><button class="btn btn-primary" (click)="openPopup(detail)">Details</button></td>
+      <!-- <td><button class="btn btn-primary" [routerLink]="['/Admin', 'detail-formateur', formateur.id]">Details</button></td> -->
+
+
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+<!-- details -->
+
+<ng-template #detail let-modal>
+
+  <div class="modal-content">
+    <div class="modal-header p-5 pb-4 border-bottom-0">
+      <h1 class="fw-bold mb-0 fs-2">Formateur Details</h1>
+      <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+    </div>
+  
+    <div class="modal-body p-5 pt-0">
+      
+      <ul class="list-group">
+        <li class="list-group-item">
+            <strong>ID : </strong> <span id="id">formateur</span>
+        </li>
+        <li class="list-group-item">
+            <strong>CIN : </strong> <span id="CIN">formateur</span>
+        </li>
+        <li class="list-group-item">
+            <strong>Nom : </strong> <span id="Nom">formateur</span>
+        </li>
+        <li class="list-group-item">
+            <strong>Prenom : </strong> <span id="Prenom">formateur</span>
+        </li>
+        <li class="list-group-item">
+            <strong>Numero Telephone : </strong> <span id="tel">formateur</span>
+        </li>
+        <li class="list-group-item">
+            <strong>Email : </strong> <span id="Email">formateur</span>
+        </li>
+        <li class="list-group-item">
+            <strong>Password : </strong> <span id="Password">formateur</span>
+        </li>
+        
+        <li class="list-group-item">
+            <strong>Specialites : </strong>
+            <span id="Specialites" ><span class="badge rounded-pill bg-secondary mx-1">spe</span></span>
+        </li>
+        
+    </ul>
+    </div>
+  </div> 
+
+</ng-template>

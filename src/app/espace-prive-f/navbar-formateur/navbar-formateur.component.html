@@ -1,0 +1,74 @@
+<nav  style="opacity: 0.90;border-bottom-left-radius: 15px ;border-bottom-right-radius: 15px ;" class="navbar navbar-expand-lg py-2 bg-info"    >
+    <div class="container-fluid">
+      <h1  >Gestion des sessions de formations</h1>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="true" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarColor01">
+        <ul class="navbar-nav ms-auto">
+            
+          <li class="nav-item">
+            <a class="nav-link " routerLink="/public/acceuil"  routerLinkActive="active-link" [routerLinkActiveOptions]='{exact:true}' >Acceuil
+            </a>
+          </li>
+          
+          <li class="nav-item" >
+            <a class="nav-link " routerLink="/public/formations"  routerLinkActive="active-link" [routerLinkActiveOptions]='{exact:true}' >Formations
+            </a>
+          </li>
+
+          
+  
+  
+  
+          <!-- <li class="nav-item">
+            <a class="nav-link " routerLink=""  routerLinkActive="active-link" [routerLinkActiveOptions]='{exact:true}' >Espace Candidats
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " routerLink=""  routerLinkActive="active-link" [routerLinkActiveOptions]='{exact:true}' >Espace Formateurs
+            </a>
+          </li> -->
+  
+          <li class="nav-item">
+            <!-- <a class="btn btn-outline-success mx-auto" (click)="openPopup(login)" >Logout
+            </a> -->
+
+
+            <a class="nav-link mx-auto" style="display: inline-block;" routerLink="/formateur/mesFormations"  routerLinkActive="active-link" [routerLinkActiveOptions]='{exact:true}' >Mes Formations
+            </a>
+          
+            <a class="btn btn-outline-secondary mx-2" (click)="openPopup(logout)" >Logout
+            </a>
+          </li>
+          </ul>
+      </div>
+    </div>
+  </nav>
+  
+  
+  
+  
+  
+  
+<!-- log out -->
+<ng-template #logout let-modal>
+
+    <div class="modal-dialog" role="document">
+      <div class="modal-content" >
+        <div class="modal-body p-4 text-center" >
+          <h5 class="mb-0"> {{userName}} </h5>
+          <p class="mb-0"> Confirmez votre Déconnexion. </p>
+        </div>
+        <div class="modal-footer flex-nowrap p-0">
+          <button type="button" class="btn btn-lg btn-link fs-6 text-decoration-none col-6 py-3 m-0 rounded-0 border-end"><strong>Oui, je confirme</strong></button>
+          <button type="button" class="btn btn-lg btn-link fs-6 text-decoration-none col-6 py-3 m-0 rounded-0" (click)="modal.close('Close click')" data-bs-dismiss="modal">Non</button>
+        </div>
+      </div>
+    </div>
+  
+  </ng-template>  
+  
+  
+  
+  
