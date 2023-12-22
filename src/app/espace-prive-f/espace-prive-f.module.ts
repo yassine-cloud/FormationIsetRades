@@ -9,7 +9,6 @@ import { ContainerComponent } from './container/container.component';
 
 @NgModule({
   declarations: [
-    NavbarFormateurComponent,
     MesFormationsComponent,
     ContainerComponent
   ],

@@ -14,6 +14,9 @@ import { AcceuilComponent } from './espace-public/acceuil/acceuil.component';
 import { FormationsComponent } from './espace-public/formations/formations.component';
 import { DetailFormationComponent } from './espace-public/detail-formation/detail-formation.component';
 import { SignUpComponent } from './espace-public/sign-up/sign-up.component';
+import { NavbarAdminComponent } from './espace-admin/navbar-admin/navbar-admin.component';
+import { NavbarCandidatComponent } from './espace-prive-c/navbar-candidat/navbar-candidat.component';
+import { NavbarFormateurComponent } from './espace-prive-f/navbar-formateur/navbar-formateur.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +28,10 @@ import { SignUpComponent } from './espace-public/sign-up/sign-up.component';
     FormationsComponent,
     DetailFormationComponent,
     SignUpComponent,
+    // navbar
+    NavbarAdminComponent,
+    NavbarCandidatComponent,
+    NavbarFormateurComponent
   ],
   imports: [
     BrowserModule,

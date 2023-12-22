@@ -9,7 +9,6 @@ import { MesFormationsComponent } from './mes-formations/mes-formations.componen
 
 @NgModule({
   declarations: [
-    NavbarCandidatComponent,
     ContainerComponent,
     MesFormationsComponent
   ],

@@ -1,12 +1,19 @@
-import { Component, TemplateRef, inject } from '@angular/core';
+import { Component, OnInit, TemplateRef, inject } from '@angular/core';
+import { Router } from '@angular/router';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { ConnexionService } from 'src/app/Services/connexion.service';
 
 @Component({
   selector: 'app-navbar-admin',
   templateUrl: './navbar-admin.component.html',
   styleUrls: ['./navbar-admin.component.css']
 })
-export class NavbarAdminComponent {
+export class NavbarAdminComponent implements OnInit {
+
+  userName ?: string;
+
+  constructor(private conn : ConnexionService , private router : Router){}
+
 
 
   // pop up view
@@ -16,8 +23,18 @@ export class NavbarAdminComponent {
     this.modalService.open(content , {backdropClass : 'pop-up-backdrop' })
   }
 
-  userName = "yassine";
+  deconnexion(){
+    this.conn.deconnexion();
+    this.modalService.dismissAll("deconnecter ");
+    this.router.navigate(["/"]);
+  }
+
 
   //////////////////////////////////////////////////////////////////
+
+
+  ngOnInit(): void {
+    this.userName=this.conn.nom;
+}
 
 }

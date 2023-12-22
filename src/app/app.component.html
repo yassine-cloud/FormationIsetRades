@@ -1,5 +1,15 @@
 <div class="d-flex flex-column min-vh-100" >
 
+<app-navbar-public *ngIf="conn.connected==false"></app-navbar-public>
+
+<app-navbar-candidat *ngIf="conn.connected==true && conn.role  == 'candidat' " ></app-navbar-candidat>
+
+<app-navbar-formateur *ngIf="conn.connected==true && conn.role == 'formateur' " ></app-navbar-formateur>
+
+<app-navbar-admin *ngIf="conn.connected==true && conn.role == 'admin' " ></app-navbar-admin>
+
+
+
 
 <router-outlet></router-outlet>
 

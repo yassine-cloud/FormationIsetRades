@@ -17,17 +17,6 @@
           </a>
         </li>
 
-
-
-        <!-- <li class="nav-item">
-          <a class="nav-link " routerLink=""  routerLinkActive="active-link" [routerLinkActiveOptions]='{exact:true}' >Espace Candidats
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link " routerLink=""  routerLinkActive="active-link" [routerLinkActiveOptions]='{exact:true}' >Espace Formateurs
-          </a>
-        </li> -->
-
         <li class="nav-item">
           <a class="btn btn-outline-success mx-auto" (click)="openPopup(login)" >Login
           </a>
@@ -54,30 +43,27 @@
   
     <div class="modal-body p-5 pt-0">
       
-      <form class="">
+      <form [formGroup]="formLogin" (ngSubmit)="connecter()">
+
+        <small *ngIf="formerror" class="error-box mb-3 rounded-3">Email ou bien Password est incorrecte. <br> veuillez verifier vos données.</small> 
+
+
         <div class="form-floating mb-3">
-          <input type="email" class="form-control rounded-3" id="floatingInput" placeholder="name@example.com">
+          <input type="email" formControlName="email" class="form-control rounded-3" id="floatingInput" placeholder="name@example.com">
           <label for="floatingInput">Email address</label>
         </div>
         <div class="form-floating mb-3">
-          <input type="password" class="form-control rounded-3" id="floatingPassword" placeholder="Password">
+          <input type="password" formControlName="password" class="form-control rounded-3" id="floatingPassword" placeholder="Password">
           <label for="floatingPassword">Password</label>
         </div>
-        <button class="w-100 mb-2 btn btn-lg rounded-3 btn-primary" type="submit">Log-in</button>
+        <button class="w-100 mb-2 btn btn-lg rounded-3 btn-primary" [disabled]="formLogin.invalid" type="submit">Log-in</button>
 
-        <!-- <small class="text-body-secondary">By clicking Sign up, you agree to the terms of use.</small>  -->
-        <!-- <br>
-        <button type="button" class="btn btn-secondary" (click)="modal.close('Close click')">Close</button> -->
+        
 
         <hr class="my-4">
         <h2 class="fs-5 fw-bold mb-3">Or sign-up</h2>
-        <!-- <button class="w-100 py-2 mb-2 btn btn-outline-secondary rounded-3" type="submit">
-          Sign up as Candidat
-        </button>
-        <button class="w-100 py-2 mb-2 btn btn-outline-primary rounded-3" type="submit">
-          Sign up as Formateur
-        </button> -->
-        <button class="w-100 py-2 mb-2 btn btn-outline-secondary rounded-3" routerLink="/public/sign-up" (click)="modal.close('Close click')" type="submit">
+  
+        <button class="w-100 py-2 mb-2 btn btn-outline-secondary rounded-3" routerLink="/public/sign-up" (click)="modal.dismiss()" type="submit">
           Sign up
         </button>
       </form>
@@ -86,7 +72,6 @@
 </ng-template>
 
 
-<!-- interface sign up -->
 
 
 

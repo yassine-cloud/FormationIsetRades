@@ -23,7 +23,6 @@ import { EditerSessionFormationComponent } from './sessionFormation/editer-sessi
   declarations: [
     AfficherCandidatsComponent,
     ContainerComponent,
-    NavbarAdminComponent,
     AfficherFormateurComponent,
     AfficherFormationComponent,
     AfficherSessionFormationComponent,

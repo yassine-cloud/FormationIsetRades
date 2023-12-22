@@ -15,10 +15,19 @@ input.ng-invalid.ng-touched{
   input.ng-valid.ng-touched{
     border: 1px solid green;
   }
-  
+
   .error{
     color: red;
     font-size: smaller;
+  }
+  
+  .error-box{
+    display: block;
+    color: red;
+    font-size: smaller;
+    border: 1px red solid;
+    padding: 5px ;
+    background-color: rgba(255, 115, 0, 0.3);
   }
 
   /* body */
@@ -65,15 +74,17 @@ input.ng-invalid.ng-touched{
 
 /* inputs */
 
-form {
+/* form {
   text-align: -webkit-center;
-}
+} */
 
 
-.form-control , .dynamic-input {
-  /* min-width: 350px; */
+
+.form-control  {
   max-width: 500px;
-  /* color: grey; */
+}
+.form-floating label{
+  color: grey;
 }
 
 

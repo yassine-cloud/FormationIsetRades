@@ -222,7 +222,7 @@
       "description": "Introduction to JavaScript programming language",
       "chargeHoraire": 40,
       "programme": "Week 1: Basics, Week 2: Functions, Week 3: DOM manipulation",
-      "niveau": "intermédiaire",
+      "niveauDifficulte": "intermédiaire",
       "motsCles": [
         "JavaScript",
         "Programming",
@@ -231,8 +231,7 @@
       "categories": [
         "Programming",
         "Web Development"
-      ],
-      "img": "https://cyberhoot.com/wp-content/uploads/2020/07/Free-Courses-to-learn-JavaScript.jpg"
+      ]
     },
     {
       "id": 2,
@@ -240,7 +239,7 @@
       "description": "Comprehensive course on using Python for data analysis and machine learning",
       "chargeHoraire": 60,
       "programme": "Week 1: Python Basics, Week 2: Data Manipulation with Pandas, Week 3: Machine Learning with scikit-learn",
-      "niveau": "avancé",
+      "niveauDifficulte": "avancé",
       "motsCles": [
         "Python",
         "Data Science",
@@ -249,8 +248,7 @@
       "categories": [
         "Programming",
         "Data Science"
-      ],
-      "img": "https://w7.pngwing.com/pngs/217/769/png-transparent-python-language-logo-python-data-science-data-analyst-programming-language-interface-3d-icon.png"
+      ]
     },
     {
       "id": 3,
@@ -258,7 +256,7 @@
       "description": "Learn the basics of graphic design, including principles of color, typography, and layout",
       "chargeHoraire": 30,
       "programme": "Week 1: Introduction to Design Principles, Week 2: Color Theory, Week 3: Typography and Layout",
-      "niveau": "intermédiaire",
+      "niveauDifficulte": "intermédiaire",
       "motsCles": [
         "Graphic Design",
         "Design Principles",
@@ -267,8 +265,7 @@
       "categories": [
         "Design",
         "Digital Arts"
-      ],
-      "img": "https://w7.pngwing.com/pngs/179/132/png-transparent-motion-graphic-design-motion-graphics-creative-television-electronics-web-design-thumbnail.png"
+      ]
     },
     {
       "id": 4,
@@ -276,7 +273,7 @@
       "description": "Explore the fundamentals of cybersecurity, including network security and ethical hacking",
       "chargeHoraire": 45,
       "programme": "Week 1: Basics of Cybersecurity, Week 2: Network Security, Week 3: Ethical Hacking",
-      "niveau": "intermédiaire",
+      "niveauDifficulte": "intermédiaire",
       "motsCles": [
         "Cybersecurity",
         "Ethical Hacking",
@@ -285,35 +282,7 @@
       "categories": [
         "IT Security",
         "Technology"
-      ],
-      "img": "https://w7.pngwing.com/pngs/525/108/png-transparent-hacker-computer-cybersecurity-fraud-laptop-hacking-thumbnail.png"
-    }
-  ],
-  "FormationsDemandees": [
-    {
-      "objet": "azrar",
-      "explication": "azfazgfag",
-      "id": 1
-    },
-    {
-      "objet": "eza",
-      "explication": "aztzr",
-      "id": 2
-    },
-    {
-      "objet": "azer",
-      "explication": "azr",
-      "id": 3
-    },
-    {
-      "objet": "azet",
-      "explication": "azte",
-      "id": 4
-    },
-    {
-      "objet": "azfgt",
-      "explication": "aztge",
-      "id": 5
+      ]
     }
   ],
   "SessionFormation": [
@@ -402,205 +371,12 @@
       "nom": "Smith",
       "prenom": "Jane",
       "cin": "DEF456UVW",
-      "role": "formateur",
       "tel": "+9876543210",
       "specialites": [
         "Data Science",
         "Python"
       ],
       "id": 3
-    },
-    {
-      "email": "bob.johnson@example.com",
-      "password": "$2a$10$rf.mNS8BewTQrDxGhcT5I.HPeuImiaVj4NhuzRqMxH0CzNii/Lbxa",
-      "nom": "Johnson",
-      "prenom": "Bob",
-      "cin": "GHI789JKL",
-      "role": "formateur",
-      "tel": "+1122334455",
-      "specialites": [
-        "Graphic Design",
-        "Adobe Illustrator"
-      ],
-      "id": 4
-    },
-    {
-      "email": "Mmtir@email.com",
-      "password": "$2a$10$NhNcx3Y6AZQTlsjfhELuF.RMbE8CkE1nsg2XK4qMHfDlPn9L.UMiS",
-      "nom": "Mtir",
-      "prenom": "Mehdi",
-      "cin": "GHI752JKL",
-      "role": "formateur",
-      "tel": "+21693565345",
-      "specialites": [
-        "Angular",
-        "Java",
-        "Bootstrap",
-        "JavaScript",
-        "FullStack",
-        "Python"
-      ],
-      "id": 5
-    },
-    {
-      "email": "alice.doe@example.com",
-      "password": "$2a$10$cSjz4MJ8/bhJ5uDiHmq7L.K8OH6m6mDtYF.4Tt6OldvKhfxm4JaYC",
-      "nom": "Doee",
-      "prenom": "Alice",
-      "cin": "XYZ789ABC",
-      "role": "candidat",
-      "id": 6
-    },
-    {
-      "email": "bob.smith@example.com",
-      "password": "$2a$10$7ET6TAhGacVrfghpC6.a0ObkOqnLkH0gde5t.xha42JZjubSzNDHi",
-      "nom": "Smith",
-      "prenom": "Bob",
-      "cin": "ABC456XYZ",
-      "role": "candidat",
-      "id": 7
-    },
-    {
-      "email": "eva.johnson@example.com",
-      "password": "$2a$10$ZHDhRjtepttnCQRG8mB.GuyywEIGQ39Xgbm4/z.kVQx5OEXMtCx5K",
-      "nom": "Johnson",
-      "prenom": "Eva",
-      "cin": "DEF123UVW",
-      "role": "candidat",
-      "id": 8
-    },
-    {
-      "email": "alex.brown@example.com",
-      "password": "$2a$10$BrUK9oVEAbYEbyCWh3ERw.DtTGYeO9rVTBbeqq7Ge.GxEeK2LOx.e",
-      "nom": "Brown",
-      "prenom": "Alex",
-      "cin": "GHI789JKL",
-      "role": "candidat",
-      "id": 9
-    },
-    {
-      "email": "maria.garcia@example.com",
-      "password": "$2a$10$Jf56d4QAJxBMWNAG/TqmC.Xn.nbI7UUME5gQbhz1YPHG8CNJjV.wW",
-      "nom": "Garcia",
-      "prenom": "Maria",
-      "cin": "JKL789MNO",
-      "role": "candidat",
-      "id": 10
-    },
-    {
-      "email": "wei.chen@example.com",
-      "password": "$2a$10$Nphy0Kod2wm8IyXmCIgcTumHQuQhhRH6jzYYAerE5Paf2AeaZaOfS",
-      "nom": "Chen",
-      "prenom": "Wei",
-      "cin": "PQR123XYZ",
-      "role": "candidat",
-      "id": 11
-    },
-    {
-      "email": "minho.kim@example.com",
-      "password": "$2a$10$/YADYmOiOlo2J54eeTwv..aZY6Q7DRzWCfB9OPpmYjD0VJZXxTbna",
-      "nom": "Kim",
-      "prenom": "Minho",
-      "cin": "STU456ABC",
-      "role": "candidat",
-      "id": 12
-    },
-    {
-      "email": "sanya.gupta@example.com",
-      "password": "$2a$10$VJqBHhGJy/726hBInBL98.eHF6Oa7BD5StgY9p6fCUOzGQ4tZfM8W",
-      "nom": "Gupta",
-      "prenom": "Sanya",
-      "cin": "VWX789DEF",
-      "role": "candidat",
-      "id": 13
-    },
-    {
-      "email": "juan.martinez@example.com",
-      "password": "$2a$10$zjJtl2VLlEhUoglHIaNuFuQLp278YDjPPbPdpGnJ8VOb3asO1nTpG",
-      "nom": "Martinez",
-      "prenom": "Juan",
-      "cin": "YZA789BCD",
-      "role": "candidat",
-      "id": 14
-    },
-    {
-      "email": "haruka.aoki@example.com",
-      "password": "$2a$10$fK2ljkKcmfbhvMXqXrbl2O4G7w1KjHicNG8bGrUBy9RJeCLBBfudm",
-      "nom": "Aoki",
-      "prenom": "Haruka",
-      "cin": "EFG789HIJ",
-      "role": "candidat",
-      "id": 15
-    },
-    {
-      "email": "miguel.lopez@example.com",
-      "password": "$2a$10$RooBRm87qDEq/x2CUsfNZOJPNB9o.DcvKi0ysMNWERoD7p.EvGLvy",
-      "nom": "Lopez",
-      "prenom": "Miguel",
-      "cin": "KLM789NOP",
-      "role": "candidat",
-      "id": 16
-    },
-    {
-      "email": "yi.wang@example.com",
-      "password": "$2a$10$iLv.m0St7hhZdkzZw7SEku9VhKHOcq2lvGOIf7VXckyZBQEJib3Km",
-      "nom": "Wang",
-      "prenom": "Yi",
-      "cin": "QRS123TUV",
-      "role": "candidat",
-      "id": 17
-    },
-    {
-      "email": "hyejin.park@example.com",
-      "password": "$2a$10$7p6LNH4Mkn4DyPuDPFHTle0Mmmt24YN2LA07umBCLXwlnG6lXCirO",
-      "nom": "Park",
-      "prenom": "Hyejin",
-      "cin": "UVW456XYZ",
-      "role": "candidat",
-      "id": 18
-    },
-    {
-      "email": "raj.singh@example.com",
-      "password": "$2a$10$K1Xb4pz.eWGgxGcFP/RjjOifh6fqZ7zNmx3PDYC6p8SXb6tS7lcCK",
-      "nom": "Singh",
-      "prenom": "Raj",
-      "cin": "ABC789DEF",
-      "role": "candidat",
-      "id": 19
-    },
-    {
-      "email": "yuki.kawasaki@example.com",
-      "password": "$2a$10$WsEiwVq5kDc3naTj4jlsFOqYqr1P9bbs/3fxiGG2SVhDH5pkJzp6S",
-      "nom": "Kawasaki",
-      "prenom": "Yuki",
-      "cin": "GHI123JKL",
-      "role": "candidat",
-      "id": 20
-    },
-    {
-      "email": "Saadaoui@example.com",
-      "password": "$2a$10$sINaFlMrLlQw09m4PtSVRu2fVXaqPZ0g7jrYOjg0wv3rRzts5dtl2",
-      "nom": "Saadaoui",
-      "prenom": "Yassine",
-      "cin": "YANKEE16",
-      "role": "candidat",
-      "id": 21
-    },
-    {
-      "email": "saadaouikdr@hotmail.com",
-      "password": "$2a$10$DAlj7D4LcNlRrG5XIf2ra.DILam5Q5U1SCJB6o85K.XHlc5ND/RQ2",
-      "nom": "SAADAOUI",
-      "prenom": "Abdelkader",
-      "cin": "100546",
-      "tel": "986532",
-      "specialites": [
-        "linux",
-        "python",
-        "system Logique"
-      ],
-      "confirmPassword": "2023",
-      "role": "formateur",
-      "id": 22
     }
   ]
 }

@@ -11,7 +11,7 @@ const routes: Routes = [
   children:[
     {path : 'acceuil' , component : AcceuilComponent},
     {path : 'formations' , component : FormationsComponent},
-    {path : 'detail' , component : DetailFormationComponent},
+    {path : 'detail/:id' , component : DetailFormationComponent},
     {path : 'sign-up' , component : SignUpComponent}
   ]},
   {path : 'candidat' , loadChildren : 

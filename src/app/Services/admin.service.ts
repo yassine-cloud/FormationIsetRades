@@ -9,13 +9,13 @@ export class AdminService {
 
   constructor(private http : HttpClient) { }
 
-  // envirement
-  private url = "http://localhost:3000/login";
+  // // envirement
+  // private url = "http://localhost:3000/login";
 
-  // function
-  login(email: string, password: string) {
-    return this.http.post<{ accessToken: string, user: Admin }>(`${this.url}`, { email, password })
-  } 
+  // // function
+  // login(email: string, password: string) {
+  //   return this.http.post<{ accessToken: string, user: Admin }>(`${this.url}`, { email, password })
+  // } 
 
 
 

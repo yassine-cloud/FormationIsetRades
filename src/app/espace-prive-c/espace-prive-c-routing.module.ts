@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ContainerComponent } from './container/container.component';
 import { MesFormationsComponent } from './mes-formations/mes-formations.component';
+import { AcceuilComponent } from '../espace-public/acceuil/acceuil.component';
 
 const routes: Routes = [
   {path : '' , component : ContainerComponent ,
