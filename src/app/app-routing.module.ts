@@ -5,6 +5,9 @@ import { AcceuilComponent } from './espace-public/acceuil/acceuil.component';
 import { FormationsComponent } from './espace-public/formations/formations.component';
 import { DetailFormationComponent } from './espace-public/detail-formation/detail-formation.component';
 import { SignUpComponent } from './espace-public/sign-up/sign-up.component';
+import { candidatGuard } from './Authentification/candidat.guard';
+import { formateurGuard } from './Authentification/formateur.guard';
+import { adminGuard } from './Authentification/admin.guard';
 
 const routes: Routes = [
   {path : 'public' , component : ContainerComponent , 
@@ -16,13 +19,13 @@ const routes: Routes = [
   ]},
   {path : 'candidat' , loadChildren : 
                       () => import("./espace-prive-c/espace-prive-c.module")
-                      .then(m=>m.EspacePriveCModule) },
+                      .then(m=>m.EspacePriveCModule) , canActivate : [candidatGuard] },
   {path : 'formateur' , loadChildren :
                       () => import("./espace-prive-f/espace-prive-f.module")
-                      .then(m=>m.EspacePriveFModule)},
+                      .then(m=>m.EspacePriveFModule) , canActivate : [formateurGuard] },
   {path : 'admin' , loadChildren :
                       () => import("./espace-admin/espace-admin.module")
-                      .then(m=>m.EspaceAdminModule) },
+                      .then(m=>m.EspaceAdminModule) , canActivate : [adminGuard] },
   {path : '**' , redirectTo : '/public/acceuil' , pathMatch : 'full' }
 ];
 

@@ -1,3 +1,14 @@
+
+# To Start the Project
+
+IMPORTANT !!!!
+- you need to install angular CLI
+- Click "InstallRequirements" to install all requirement for the project
+
+1. click sur "ClickToStartJSON" to start Server JSON
+2. click sur "ClickToStartServer" to start Angular
+
+
 # FormationIsetRades
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.5.
