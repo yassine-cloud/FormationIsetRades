@@ -1,13 +1,19 @@
 <header>
-    <h1 class="display-4">Bienvenue sur l'application de gestion des sessions de formation</h1>
+  <div style="text-align: center;" ><h1 class="display-4">Bienvenue sur l'application de gestion des sessions de formation</h1></div>
+    
   </header>
   
   <main >
     <section class="hero">
-      <img src="../../../assets/img/formasyon-1200x1050.jpg" alt="Image de formation" class="img-fluid "  style="margin: auto;width: 100%; max-width: 500px;display: block;" >
+      <img src="https://media.istockphoto.com/id/1002018094/fr/photo/vue-arri%C3%A8re-de-gens-daffaires-participant-%C3%A0-un-s%C3%A9minaire-dans-la-salle-du-conseil.jpg?s=612x612&w=0&k=20&c=hApkqOMN8_SyhqhveUCz1ahjfov_fjldmXl8rfqysZo=" alt="Image de formation" class="img-fluid "  style="margin: auto;width: 100%; border-radius: 30px; max-width: 500px;display: block;" >
+      
+      
+      <div class="mt-5" style=" padding: auto; text-align: center;" >
       <h2 class="display-4">Trouvez la formation qui vous convient</h2>
       <p class="lead">Nous proposons une large gamme de formations dans divers domaines, pour tous les niveaux et tous les budgets.</p>
-      <a routerLink="/public/formations" class="btn btn-primary">Voir les formations</a>
+      
+        <button routerLink="/public/formations" class="btn btn-primary mb-2" style="width: 100%; max-width: 400px; border-radius: 25px; " >Voir les formations</button>
+      </div>
     </section>
 
 
@@ -43,17 +49,15 @@
     </section> -->
 
 
-    <section class="categories">
-      <h2>Categories de formations</h2>
+    <section class="categories mt-5 " style="text-align: center;" >
+      <h2 style="font-size: 45px ;" >Types de formations disponibles</h2>
 
       <div class="row">
 
-        <div class="col-md-4" *ngFor="let cat of Categories" >
+        <div class="col-md-4 mt-3 " *ngFor="let cat of Categories" >
           <h3>{{cat}}</h3>
-          <ul>
-            <li *ngFor="let formation of formationByCategorie(cat)" ><a routerLink="/public/detail/{{formation.id}}" >{{formation.titre}}</a></li>
+            <span *ngFor="let formation of formationByCategorie(cat)" ><a style=" display: inline-block; text-decoration: none; margin-bottom: 10px;border-radius: 25px;  padding: 5px 15px; background-color: #8ed5fd;" routerLink="/public/detail/{{formation.id}}" >{{formation.titre}}</a> <br></span>
             
-          </ul>
         </div>
 
 

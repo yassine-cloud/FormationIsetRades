@@ -5,6 +5,13 @@ IMPORTANT !!!!
 - you need to install angular CLI
 - Click "InstallRequirements" to install all requirement for the project
 
+- npm install
+
+- npm install -g json-server
+
+- npm install express json-server-auth --save
+
+
 1. click sur "ClickToStartJSON" to start Server JSON
 2. click sur "ClickToStartServer" to start Angular
 

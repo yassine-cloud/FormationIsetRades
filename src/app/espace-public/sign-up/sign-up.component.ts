@@ -59,7 +59,7 @@ export class SignUpComponent implements OnInit {
         cin : ["",Validators.required],
         email : ["",[Validators.required , Validators.email]],
         tel : ["",Validators.required],
-        specialites : ["",[Validators.required,Validators.pattern("[ a-zA-Z0-9]+(,[ a-zA-Z0-9]+)*")]],
+        specialites : ["",[Validators.required,Validators.pattern("[^,]+(,[^,]+)*")]],
         password : [ "" ,Validators.required],
         confirmPassword : ["" ,Validators.required],
         role : [this.role , Validators.required]

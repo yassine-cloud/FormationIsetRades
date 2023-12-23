@@ -9,6 +9,11 @@ body{
     backdrop-filter: blur(4px);
 }
 
+.navbar-color {
+  background-color: red;
+
+}
+
 input.ng-invalid.ng-touched{
     border: 1px solid red;
   }
@@ -28,6 +33,11 @@ input.ng-invalid.ng-touched{
     border: 1px red solid;
     padding: 5px ;
     background-color: rgba(255, 115, 0, 0.3);
+  }
+
+  .remarque {
+    color: black;
+    font-size: smaller;
   }
 
   .text-clicable{

@@ -38,22 +38,21 @@
             <div  class="form-floating mb-3">
                 <input type="text" id="dateDebut" name="dateDebut" placeholder="dateDebut" formControlName="dateDebut" class=" form-control rounded-3" >
                 <label for="dateDebut">Date debut(yyyy-mm-dd) </label>
-                <!-- <span class="error" *ngIf="form.get('specialites')?.value=='' && form.get('specialites')?.touched " >Vos Specialites sont obligatoire <br></span>
-                <span class="error" *ngIf="form.get('specialites')?.invalid && form.get('specialites')?.touched" >Vos Specialites doit etre separee par une ,</span> -->
               </div>
 
               <div  class="form-floating mb-3">
                 <input type="text" id="dateFin" name="dateFin" placeholder="dateFin" formControlName="dateFin" class=" form-control rounded-3" >
                 <label for="dateFin">Date fin(yyyy-mm-dd) </label>
-                <!-- <span class="error" *ngIf="form.get('specialites')?.value=='' && form.get('specialites')?.touched " >Vos Specialites sont obligatoire <br></span>
-                <span class="error" *ngIf="form.get('specialites')?.invalid && form.get('specialites')?.touched" >Vos Specialites doit etre separee par une ,</span> -->
               </div>
       
       <div  class="form-floating mb-3">
+        <span class="remarque">Séparrer les planning par une virgule ( , )</span>
         <input type="text" id="planningSeances" name="planningSeances" placeholder="planningSeances" formControlName="planningSeances" class=" form-control rounded-3" >
         <label for="planningSeances">planning Seances :</label>
-        <!-- <span class="error" *ngIf="form.get('specialites')?.value=='' && form.get('specialites')?.touched " >Vos Specialites sont obligatoire <br></span>
-        <span class="error" *ngIf="form.get('specialites')?.invalid && form.get('specialites')?.touched" >Vos Specialites doit etre separee par une ,</span> -->
+        <span class="remarque">Séparrer les planning par une virgule ( , )</span><br>
+
+        <span class="error" *ngIf="form.get('planningSeances')?.value=='' && form.get('planningSeances')?.touched " >le planning est obligatoire <br></span>
+        <span class="error" *ngIf="form.get('planningSeances')?.invalid && form.get('planningSeances')?.touched" >le planning doit être separée par une ( , )</span>
       </div>
     
       <button type="submit" class="btn form-control btn-success mt-3" [disabled]="form.invalid" style="max-width: 500px;" >Submit</button>

@@ -61,7 +61,7 @@
             <strong>formateurs : </strong> <span id="formateurs">{{sessionDetail.nomFormateurs}}</span>
         </li>
         <li class="list-group-item">
-            <strong>candidats : </strong> <span id="candidats">{{sessionDetail.nomCandidats}}</span>
+            <strong>candidats : </strong> <br> <ul> <li *ngFor="let nom of sessionDetail.nomCandidats"><span id="candidats">{{nom}}</span></li> </ul>
         </li>
         <li class="list-group-item">
             <strong>dateDebut : </strong> <span id="dateDebut">{{sessionDetail.dateDebut}}</span>
