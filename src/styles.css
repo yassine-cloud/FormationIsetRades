@@ -9,10 +9,10 @@ body{
     backdrop-filter: blur(4px);
 }
 
-.navbar-color {
-  background-color: red;
-
+b.buttonClickable{
+  cursor: pointer;color: blue;display: inline;
 }
+
 
 input.ng-invalid.ng-touched{
     border: 1px solid red;

@@ -1,4 +1,12 @@
 
+# Website features
+
+- Dachboard Admin : ( email : admin@admin.com , pass : admin )
+- Sign-up
+- connection
+- inscrire à des formations
+...
+
 # To Start the Project
 
 IMPORTANT !!!!
