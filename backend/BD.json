@@ -287,6 +287,25 @@
         "Technology"
       ],
       "img": "https://w7.pngwing.com/pngs/525/108/png-transparent-hacker-computer-cybersecurity-fraud-laptop-hacking-thumbnail.png"
+    },
+    {
+      "titre": "angular",
+      "description": "angular the best",
+      "chargeHoraire": "5001",
+      "programme": "1 2 3 4",
+      "niveau": "débutant",
+      "motsCles": [
+        "angular",
+        "javascript",
+        "typescript",
+        "JSON"
+      ],
+      "categories": [
+        "develloppement",
+        "site web"
+      ],
+      "img": "https://repository-images.githubusercontent.com/314186076/79a18fff-1aeb-4a12-9340-db81b383b5e7",
+      "id": 5
     }
   ],
   "FormationsDemandees": [
@@ -294,26 +313,6 @@
       "objet": "azrar",
       "explication": "azfazgfag",
       "id": 1
-    },
-    {
-      "objet": "eza",
-      "explication": "aztzr",
-      "id": 2
-    },
-    {
-      "objet": "azer",
-      "explication": "azr",
-      "id": 3
-    },
-    {
-      "objet": "azet",
-      "explication": "azte",
-      "id": 4
-    },
-    {
-      "objet": "azfgt",
-      "explication": "aztge",
-      "id": 5
     }
   ],
   "SessionFormation": [
@@ -321,15 +320,17 @@
       "id": 1,
       "formation": 1,
       "formateurs": [
-        1,
-        2
+        2,
+        3
       ],
       "candidats": [
-        1,
-        2
+        6,
+        7,
+        8,
+        12
       ],
-      "dateDebut": "2023-01-15T09:00:00Z",
-      "dateFin": "2023-02-28T17:00:00Z",
+      "dateDebut": "2023-01-15",
+      "dateFin": "2023-02-28",
       "planningSeances": [
         "Session 1: Introduction to Web Development, HTML Basics - Date: 2023-01-15, Time: 09:00 AM - 12:00 PM, Location: Room A",
         "Session 2: CSS Fundamentals - Date: 2023-01-17, Time: 09:00 AM - 12:00 PM, Location: Room B",
@@ -340,38 +341,58 @@
       "id": 2,
       "formation": 2,
       "formateurs": [
-        3
+        4
       ],
       "candidats": [
-        5,
-        7,
-        9
+        10,
+        12,
+        14,
+        21
       ],
-      "dateDebut": "2023-05-01T10:30:00Z",
-      "dateFin": "2023-06-15T16:30:00Z",
+      "dateDebut": "2023-05-01",
+      "dateFin": "2023-06-15",
       "planningSeances": [
         "Session 1: Graphic Design Principles - Date: 2023-05-01, Time: 10:30 AM - 01:30 PM, Location: Design Studio",
         "Session 2: Color Theory Workshop - Date: 2023-05-03, Time: 10:30 AM - 01:30 PM, Location: Design Lab"
       ]
     },
     {
-      "id": 3,
       "formation": 3,
       "formateurs": [
-        1,
-        2
+        2,
+        5
       ],
       "candidats": [
-        1,
-        2,
-        3
+        6,
+        7,
+        8
       ],
-      "dateDebut": "2023-03-01T09:00:00Z",
-      "dateFin": "2023-04-15T17:00:00Z",
+      "dateDebut": "2024-03-01",
+      "dateFin": "2024-04-15",
       "planningSeances": [
-        "Session 1: Introduction to Data Science - Date: 2023-03-01, Time: 09:00 AM - 12:00 PM, Location: Room A",
-        "Session 2: Data Analysis with Python - Date: 2023-03-03, Time: 09:00 AM - 12:00 PM, Location: Room B"
-      ]
+        "Session 1: Introduction to Data Science - Date: 2023-03-01",
+        "Time: 09:00 AM - 12:00 PM",
+        "Location: Room A",
+        "Session 2: Data Analysis with Python - Date: 2023-03-03",
+        "Time: 09:00 AM - 12:00 PM",
+        "Location: Room B"
+      ],
+      "id": 3
+    },
+    {
+      "formation": 5,
+      "formateurs": [
+        5
+      ],
+      "candidats": [],
+      "dateDebut": "2024-01-25",
+      "dateFin": "2024-01-26",
+      "planningSeances": [
+        "1",
+        "2",
+        "3"
+      ],
+      "id": 4
     }
   ],
   "users": [
@@ -445,7 +466,7 @@
     {
       "email": "alice.doe@example.com",
       "password": "$2a$10$cSjz4MJ8/bhJ5uDiHmq7L.K8OH6m6mDtYF.4Tt6OldvKhfxm4JaYC",
-      "nom": "Doee",
+      "nom": "Doees",
       "prenom": "Alice",
       "cin": "XYZ789ABC",
       "role": "candidat",
@@ -588,19 +609,30 @@
     },
     {
       "email": "saadaouikdr@hotmail.com",
-      "password": "$2a$10$DAlj7D4LcNlRrG5XIf2ra.DILam5Q5U1SCJB6o85K.XHlc5ND/RQ2",
-      "nom": "SAADAOUI",
+      "password": "$2a$10$vQ774pg6tOHnW6Gt09Kr5eaYyhWBTsvKK3N.EsNcLNGeF/wY8DIKe",
+      "nom": "Saadaoui",
       "prenom": "Abdelkader",
       "cin": "100546",
-      "tel": "986532",
+      "tel": "123",
       "specialites": [
-        "linux",
-        "python",
-        "system Logique"
+        "system Logique",
+        "python"
       ],
-      "confirmPassword": "2023",
       "role": "formateur",
       "id": 22
+    },
+    {
+      "email": "eza@zea",
+      "password": "$2a$10$hciT2WUZvJxdE6vYzSxqK.yiI1O0dE1QXnyBZ2.PP7Rc.w9KOU3X.",
+      "nom": "hatem",
+      "prenom": "mohsen",
+      "cin": "eaz",
+      "tel": "465789",
+      "specialites": [
+        "angular"
+      ],
+      "role": "formateur",
+      "id": 23
     }
   ]
 }

@@ -1,1 +1,58 @@
-<p>editer-formation works!</p>
+<form [formGroup]="form" (ngSubmit)="editerFormation()" >
+
+    <h2>Ajouter une Formation</h2>
+      <div class="form-floating mb-3">
+          <input type="text" id="titre" name="titre" placeholder="titre" formControlName="titre" class=" form-control" >
+          <label for="titre">titre:</label>
+        </div>
+      
+        <div class="form-floating mb-3">
+          <input type="text" id="description" name="description"  placeholder="description"  formControlName="description" class=" form-control" >
+          <label for="description">description:</label>
+        </div>
+      
+        <div class="form-floating mb-3">
+          <input type="text" id="chargeHoraire" name="chargeHoraire" placeholder="chargeHoraire" formControlName="chargeHoraire"  class=" form-control" >
+          <label for="chargeHoraire">chargeHoraire:</label>
+        </div>
+  
+        <div class="form-floating mb-3">
+          <input type="text" id="programme" name="programme" placeholder="programme" formControlName="programme" class=" form-control" >
+          <label for="programme">programme:</label>
+        </div>
+  
+        <div  class="form-floating mb-3">
+          <input type="text" id="motsCles" name="motsCles" placeholder="motsCles" formControlName="motsCles" class=" form-control" >
+          <label >motsCles :</label>
+          <span class="error" *ngIf="form.get('motsCles')?.value=='' && form.get('motsCles')?.touched ">Vos Specialites sont obligatoire <br></span>
+          <span class="error" *ngIf="form.get('motsCles')?.invalid && form.get('motsCles')?.touched">Vos Specialites doit etre separee par une ,</span>
+        </div>
+  
+        <div  class="form-floating mb-3">
+          <input type="text" id="categories" name="categories" placeholder="categories" formControlName="categories" class=" form-control" >
+          <label >categories :</label>
+          <span class="error" *ngIf="form.get('categories')?.value=='' && form.get('categories')?.touched ">Vos Specialites sont obligatoire <br></span>
+          <span class="error" *ngIf="form.get('categories')?.invalid && form.get('categories')?.touched">Vos Specialites doit etre separee par une ,</span>
+        </div>
+  
+        <div class="input-group form-control my-3">
+          <label for="niveauDifficulte" class="input-group-text" >niveauDifficulte:</label>
+          <select name="niveauDifficulte" id="niveauDifficulte" formControlName="niveau" class="form-select">
+              <option value="" selected hidden>Choisir...</option>
+              <option value="débutant">débutant</option>
+              <option value="intermédiaire">intermédiaire</option>
+              <option value="avancé">avancé</option>
+          </select>
+    
+        </div>
+  
+        <div class="form-floating mb-3">
+          <input type="url" id="image" name="image" placeholder="image" formControlName="img" class=" form-control" >
+          <label for="image">image:</label>
+        </div>
+      
+        <button type="submit" [disabled]="form.invalid" class="btn form-control btn-success mt-3" >Submit</button>
+      
+  
+  
+  </form>

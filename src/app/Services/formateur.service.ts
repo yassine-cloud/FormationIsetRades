@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Formateur } from '../Interfaces/formateur';
-import { Subject, catchError, map, tap } from 'rxjs';
+import { Observable, Subject, catchError, map, tap } from 'rxjs';
 import { LoginService } from './login.service';
 import { ConnexionService } from './connexion.service';
 
@@ -35,6 +35,33 @@ changeSpeToSt(sp : string[]): string  {
   return sp.join(', ');
 }
 
+// //noms des formateurs
+
+// nomFormateurs( ids : number[] ) {
+//   let tabNames : string[]=[]
+//   let names : string ="";
+//   return this.getAllFormateurs().pipe(
+//     map(
+//       (formateurs) => {
+//         formateurs.forEach(element => {
+//           if(  ids.includes(element.id!)  ){
+//             tabNames.push(element.nom)
+//           }
+//         });
+
+//         names = tabNames.join(", ");
+//         return names;     
+        
+//       }
+//     ),
+//     catchError(error => {
+//       console.error('Error Connexion:', error);
+//       throw error;
+//     })
+//   )
+
+// }
+
 // 
 
 
@@ -57,6 +84,22 @@ changeSpeToSt(sp : string[]): string  {
 
           return res;
 
+        }
+      ),
+      catchError(error => {
+        console.error('Error Connexion:', error);
+        throw error;
+      })
+  
+    )
+  }
+
+  registerParAdmin(formateur: Formateur):Observable<Formateur> {
+    let pass = formateur.password; 
+    return this.http.post<{ accessToken: string, user: Formateur }>(`${this.url}/register`, formateur).pipe(
+      map(
+        (log) =>{
+          return log.user
         }
       ),
       catchError(error => {
@@ -110,7 +153,7 @@ changeSpeToSt(sp : string[]): string  {
     );
   }
 
-  deleteFormateur(id: string) {
+  deleteFormateur(id: number) {
     return this.http.delete<Formateur>(`${this.url}/users/${id}`).pipe(
       tap(formateurDeleted => {
         this.formateurs.filter(s => s.id!==formateurDeleted.id   ); 

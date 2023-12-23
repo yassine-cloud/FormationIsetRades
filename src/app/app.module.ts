@@ -17,6 +17,7 @@ import { SignUpComponent } from './espace-public/sign-up/sign-up.component';
 import { NavbarAdminComponent } from './espace-admin/navbar-admin/navbar-admin.component';
 import { NavbarCandidatComponent } from './espace-prive-c/navbar-candidat/navbar-candidat.component';
 import { NavbarFormateurComponent } from './espace-prive-f/navbar-formateur/navbar-formateur.component';
+import { DatePipe } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,7 @@ import { NavbarFormateurComponent } from './espace-prive-f/navbar-formateur/navb
     HttpClientModule,
     NgbModule
   ],
-  providers: [],
+  providers: [DatePipe],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -18,16 +18,16 @@
     </tr>
   </thead>
   <tbody>
-    <tr >
-      <th scope="row">formateur</th>
-      <td>formateur</td>
-      <td>formateur</td>
-      <td>formateur</td>
-      <td>formateur</td>
-      <td><button class="btn btn-primary" >Editer</button></td>
+    <tr *ngFor="let formateur of formateurs">
+      <th scope="row">{{formateur.cin}}</th>
+      <td>{{formateur.nom}}</td>
+      <td>{{formateur.prenom}}</td>
+      <td>{{formateur.email}}</td>
+      <td>{{formateur.tel}}</td>
+      <td><button class="btn btn-primary" [routerLink]="['/admin', 'editer-formateur', formateur.id]" >Editer</button></td>
 
-      <td><button class="btn btn-danger" >Supprimer</button></td>
-      <td><button class="btn btn-primary" (click)="openPopup(detail)">Details</button></td>
+      <td><button class="btn btn-danger" (click)="opendetail(supp,formateur)" >Supprimer</button></td>
+      <td><button class="btn btn-primary" (click)="opendetail(detail,formateur)">Details</button></td>
       <!-- <td><button class="btn btn-primary" [routerLink]="['/Admin', 'detail-formateur', formateur.id]">Details</button></td> -->
 
 
@@ -51,30 +51,28 @@
       
       <ul class="list-group">
         <li class="list-group-item">
-            <strong>ID : </strong> <span id="id">formateur</span>
+            <strong>ID : </strong> <span id="id">{{formateurDetail.id}}</span>
         </li>
         <li class="list-group-item">
-            <strong>CIN : </strong> <span id="CIN">formateur</span>
+            <strong>CIN : </strong> <span id="CIN">{{formateurDetail.cin}}</span>
         </li>
         <li class="list-group-item">
-            <strong>Nom : </strong> <span id="Nom">formateur</span>
+            <strong>Nom : </strong> <span id="Nom">{{formateurDetail.nom}}</span>
         </li>
         <li class="list-group-item">
-            <strong>Prenom : </strong> <span id="Prenom">formateur</span>
+            <strong>Prenom : </strong> <span id="Prenom">{{formateurDetail.prenom}}</span>
         </li>
         <li class="list-group-item">
-            <strong>Numero Telephone : </strong> <span id="tel">formateur</span>
+            <strong>Numero Telephone : </strong> <span id="tel">{{formateurDetail.tel}}</span>
         </li>
         <li class="list-group-item">
-            <strong>Email : </strong> <span id="Email">formateur</span>
+            <strong>Email : </strong> <span id="Email">{{formateurDetail.email}}</span>
         </li>
-        <li class="list-group-item">
-            <strong>Password : </strong> <span id="Password">formateur</span>
-        </li>
+        
         
         <li class="list-group-item">
             <strong>Specialites : </strong>
-            <span id="Specialites" ><span class="badge rounded-pill bg-secondary mx-1">spe</span></span>
+            <span id="Specialites" *ngFor="let spe of formateurDetail.specialites" ><span class="badge rounded-pill bg-secondary mx-1">{{spe}}</span></span>
         </li>
         
     </ul>
@@ -82,3 +80,21 @@
   </div> 
 
 </ng-template>
+
+
+<!-- Supprimmer C -->
+<ng-template #supp let-modal>
+
+  <div class="modal-dialog" role="document">
+    <div class="modal-content" >
+      <div class="modal-body p-4 text-center" >
+        <h5 class="mb-0"> Confirmez La suppression Du {{formateurDetail.nom}} . </h5>
+      </div>
+      <div class="modal-footer flex-nowrap p-0">
+        <button type="button" class="btn btn-lg btn-link fs-6 text-decoration-none col-6 py-3 m-0 rounded-0 border-end" (click)="supprimer()"><strong>Oui, je confirme</strong></button>
+        <button type="button" class="btn btn-lg btn-link fs-6 text-decoration-none col-6 py-3 m-0 rounded-0" (click)="modal.close('Close click')" data-bs-dismiss="modal">Non</button>
+      </div>
+    </div>
+  </div>
+
+</ng-template>  

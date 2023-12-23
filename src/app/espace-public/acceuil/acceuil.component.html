@@ -12,7 +12,7 @@
 
 
 
-    <section class="categories">
+    <!-- <section class="categories">
       <h2>Categories de formations</h2>
       <div class="row">
         <div class="col-md-4">
@@ -39,6 +39,25 @@
             <li><a href="#">Formation sur la communication en entreprise</a></li>
           </ul>
         </div>
+      </div>
+    </section> -->
+
+
+    <section class="categories">
+      <h2>Categories de formations</h2>
+
+      <div class="row">
+
+        <div class="col-md-4" *ngFor="let cat of Categories" >
+          <h3>{{cat}}</h3>
+          <ul>
+            <li *ngFor="let formation of formationByCategorie(cat)" ><a routerLink="/public/detail/{{formation.id}}" >{{formation.titre}}</a></li>
+            
+          </ul>
+        </div>
+
+
+        
       </div>
     </section>
 

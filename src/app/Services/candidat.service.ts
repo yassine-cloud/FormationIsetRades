@@ -54,6 +54,22 @@ export class CandidatService {
   
     )
   }
+
+  registerParAdmin(candidat: Candidat):Observable<Candidat> {
+    let pass = candidat.password; 
+    return this.http.post<{ accessToken: string, user: Candidat }>(`${this.url}/register`, candidat).pipe(
+      map(
+        (log) =>{
+          return log.user
+        }
+      ),
+      catchError(error => {
+        console.error('Error Connexion:', error);
+        throw error;
+      })
+  
+    )
+  }
   // login(email: string, password: string) {
   //   return this.http.post<{ accessToken: string, user: Candidat }>(`${this.url}/login`, { email, password })
   // }
@@ -75,7 +91,7 @@ export class CandidatService {
 
   getCandidatById(id: string) {
     return this.http.get<Candidat>(`${this.url}/users/${id}`).pipe(
-      map(candidats => candidats), // Extract the first (and hopefully only) 
+      map(candidats => {return candidats}), // Extract the first (and hopefully only) 
       catchError(error => {
         console.error('Error fetching candidats:', error);
         throw error; // Rethrow to propagate the error to subscribers
@@ -97,7 +113,7 @@ export class CandidatService {
     );
   }
 
-  deleteCandidat(id: string) {
+  deleteCandidat(id: number) {
     return this.http.delete<Candidat>(`${this.url}/users/${id}`).pipe(
       tap(candidatDeleted => {
         this.candidats.filter(s => s.id!==candidatDeleted.id   ); 

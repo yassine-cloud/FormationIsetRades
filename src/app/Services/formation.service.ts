@@ -26,6 +26,22 @@ export class FormationService {
 
 
 
+  //changer String to tab specialites
+
+changeToSpe(st : string): string[] {
+  const wordsArray = st.split(',').map(word => word.trim());
+
+  const wordArray: string[] = wordsArray.map(libelle => (libelle));
+
+  return wordArray;
+
+}
+
+changeSpeToSt(st : string[]): string  {
+  return st.map(s => s).join(', ');
+}
+
+
 
 
 

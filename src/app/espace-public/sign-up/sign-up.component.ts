@@ -27,6 +27,8 @@ export class SignUpComponent implements OnInit {
 
   formCandidat !: FormGroup;
   formFormateur !: FormGroup;
+  registreFormateur !: Formateur;
+  registreCandidat !: Candidat;
   role : string = ""  ;
 
   formSelect = this.formBuild.group({
@@ -57,7 +59,7 @@ export class SignUpComponent implements OnInit {
         cin : ["",Validators.required],
         email : ["",[Validators.required , Validators.email]],
         tel : ["",Validators.required],
-        specialites : ["",[Validators.required,Validators.pattern("[a-zA-Z0-9]+(,[ a-zA-Z0-9]+)*")]],
+        specialites : ["",[Validators.required,Validators.pattern("[ a-zA-Z0-9]+(,[ a-zA-Z0-9]+)*")]],
         password : [ "" ,Validators.required],
         confirmPassword : ["" ,Validators.required],
         role : [this.role , Validators.required]
@@ -71,21 +73,28 @@ export class SignUpComponent implements OnInit {
 
 
   signCandidat(){
-    this.candidatServ.register(this.formCandidat.value as Candidat).subscribe(
+    const formValue = this.formCandidat.value ;
+    delete formValue.confirmPassword;
+    this.candidatServ.register(formValue as Candidat).subscribe(
       (res) => {
         if(res){
           this.router.navigate(["/"]);
         }
         else{
           alert("Problem das la connexion");
+          this.router.navigate(["/"]);
         }
       }
     )
+    console.log(formValue);
+    
   }
 
   signFormateur(){
-    this.formFormateur.value.specialites = this.formateurServ.changeToSpe(this.formFormateur.value.specialites)
-    this.formateurServ.register(this.formFormateur.value as Formateur).subscribe(
+    const formValue = this.formFormateur.value ;
+    formValue.specialites = this.formateurServ.changeToSpe(formValue.specialites)
+    delete formValue.confirmPassword;
+    this.formateurServ.register(formValue as Formateur).subscribe(
       (res) => {
         if(res){
           this.router.navigate(["/"]);
@@ -96,6 +105,7 @@ export class SignUpComponent implements OnInit {
         }
       }
     )
+    console.log(formValue)
   }
 
 

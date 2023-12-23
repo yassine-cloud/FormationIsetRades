@@ -1,5 +1,5 @@
-<h2>Liste des clients</h2>
-<button class="btn btn-success mb-3" [routerLink]="['/Admin', 'ajout-formateur']">Ajouter un Formateur</button>
+<h2>Liste des Sessions</h2>
+<button class="btn btn-success mb-3" [routerLink]="['/admin', 'ajouter-session']">Ajouter une Session</button>
 
 <div class="table-responsives-md">
 
@@ -7,10 +7,11 @@
   <thead>
     <tr>
       <th scope="col">#</th>
-      <th scope="col">Nom</th>
-      <th scope="col">Prenom</th>
-      <th scope="col">Email</th>
-      <th scope="col">Téléphone</th>
+      <th scope="col">Formation</th>
+      <th scope="col">Formateurs</th>
+      <th scope="col">Date debut</th>
+      <th scope="col">Date fin</th>
+      <th scope="col">Nombres des candidats</th>
       <th scope="col">Editer</th>
       <th scope="col">Supprimer</th>
       <th scope="col">Details</th>
@@ -18,17 +19,17 @@
     </tr>
   </thead>
   <tbody>
-    <tr >
-      <th scope="row">formateur</th>
-      <td>formateur</td>
-      <td>formateur</td>
-      <td>formateur</td>
-      <td>formateur</td>
-      <td><button class="btn btn-primary" >Editer</button></td>
+    <tr *ngFor="let session of showSession" >
+      <th scope="row">{{session.id}}</th>
+      <td>{{session.titreFormation}}</td>
+      <td>{{ changeSpeToSt( session.nomFormateurs ) }}</td>
+      <td>{{session.dateDebut}}</td>
+      <td>{{session.dateFin}}</td>
+      <td>{{session.candidats.length}}/15</td>
+      <td><button class="btn btn-primary" routerLink="/admin/editer-session/{{session.id}}" >Editer</button></td>
 
-      <td><button class="btn btn-danger" >Supprimer</button></td>
-      <td><button class="btn btn-primary" (click)="openPopup(detail)">Details</button></td>
-      <!-- <td><button class="btn btn-primary" [routerLink]="['/Admin', 'detail-formateur', formateur.id]">Details</button></td> -->
+      <td><button class="btn btn-danger" (click)="opendetail(supp,session)" >Supprimer</button></td>
+      <td><button class="btn btn-primary" (click)="opendetail(detail,session)">Details</button></td>
 
 
     </tr>
@@ -43,7 +44,7 @@
 
   <div class="modal-content">
     <div class="modal-header p-5 pb-4 border-bottom-0">
-      <h1 class="fw-bold mb-0 fs-2">Formateur Details</h1>
+      <h1 class="fw-bold mb-0 fs-2">Session Details</h1>
       <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
     </div>
   
@@ -51,34 +52,49 @@
       
       <ul class="list-group">
         <li class="list-group-item">
-            <strong>ID : </strong> <span id="id">formateur</span>
+            <strong>ID : </strong> <span id="id">{{sessionDetail.id}}</span>
         </li>
         <li class="list-group-item">
-            <strong>CIN : </strong> <span id="CIN">formateur</span>
+            <strong>titreFormation : </strong> <span id="titreFormation">{{sessionDetail.titreFormation}}</span>
         </li>
         <li class="list-group-item">
-            <strong>Nom : </strong> <span id="Nom">formateur</span>
+            <strong>formateurs : </strong> <span id="formateurs">{{sessionDetail.nomFormateurs}}</span>
         </li>
         <li class="list-group-item">
-            <strong>Prenom : </strong> <span id="Prenom">formateur</span>
+            <strong>candidats : </strong> <span id="candidats">{{sessionDetail.nomCandidats}}</span>
         </li>
         <li class="list-group-item">
-            <strong>Numero Telephone : </strong> <span id="tel">formateur</span>
+            <strong>dateDebut : </strong> <span id="dateDebut">{{sessionDetail.dateDebut}}</span>
         </li>
         <li class="list-group-item">
-            <strong>Email : </strong> <span id="Email">formateur</span>
+            <strong>dateFin : </strong> <span id="dateFin">{{sessionDetail.dateFin}}</span>
         </li>
         <li class="list-group-item">
-            <strong>Password : </strong> <span id="Password">formateur</span>
+            <strong>planningSeances : </strong> <br> <ul> <li *ngFor="let plan of sessionDetail.planningSeances" > <span id="planningSeances">{{plan}}</span>  </li></ul>
         </li>
         
-        <li class="list-group-item">
-            <strong>Specialites : </strong>
-            <span id="Specialites" ><span class="badge rounded-pill bg-secondary mx-1">spe</span></span>
-        </li>
+        
         
     </ul>
     </div>
   </div> 
 
 </ng-template>
+
+
+<!-- Supprimmer S -->
+<ng-template #supp let-modal>
+
+  <div class="modal-dialog" role="document">
+    <div class="modal-content" >
+      <div class="modal-body p-4 text-center" >
+        <h5 class="mb-0"> Confirmez La suppression du Session n°{{sessionDetail.id}} de la formation {{sessionDetail.titreFormation}} . </h5>
+      </div>
+      <div class="modal-footer flex-nowrap p-0">
+        <button type="button" class="btn btn-lg btn-link fs-6 text-decoration-none col-6 py-3 m-0 rounded-0 border-end" (click)="supprimer()"><strong>Oui, je confirme</strong></button>
+        <button type="button" class="btn btn-lg btn-link fs-6 text-decoration-none col-6 py-3 m-0 rounded-0" (click)="modal.close('Close click')" data-bs-dismiss="modal">Non</button>
+      </div>
+    </div>
+  </div>
+
+</ng-template>  

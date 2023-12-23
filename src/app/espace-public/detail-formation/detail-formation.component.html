@@ -26,7 +26,7 @@
                 <strong>motsCles : </strong> <span id="motsCles" *ngFor="let mot of formation.motsCles" ><span class="badge rounded-pill bg-info mx-1"> {{mot}} </span></span>
             </li>
             <li class="list-group-item">
-                <strong>categories : </strong> <span id="categories" *ngFor="let cat of formation.categories" ><span class="badge rounded-pill bg-secondary mx-1">cat</span></span>
+                <strong>categories : </strong> <span id="categories" *ngFor="let cat of formation.categories" ><span class="badge rounded-pill bg-secondary mx-1">{{cat}}</span></span>
             </li>
             
             
@@ -38,7 +38,7 @@
 
 <h2 class="display-4 my-2 mt-5" >Les sessions disponibles</h2>
   <div class="row row-cols g-4 p-auto" >
-    <ng-container *ngIf="sessions == []">
+    <ng-container *ngIf="sessions.length == 0">
         <div class="col">
             <div class="card h-100">
               <div class="card-body">
@@ -52,28 +52,28 @@
             </div>
           </div>
     </ng-container>
-    <ng-container *ngIf="sessions != []">
+    <ng-container *ngIf="sessions.length != 0">
 
-        <div class="col" *ngFor="let session of sessions">
+        <div class="col" *ngFor="let session of typeSession">
             <div class="card h-100">
               <div class="card-body">
                 <h5 class="card-title">Session à venir</h5>
                 <div class="card-text">
                     <ul class="list-group">            
                         <li class="list-group-item">
-                            <strong>Formateurs : </strong> <span >{{session.formateurs}}</span>
+                            <strong>Nombre de Formateurs : </strong> <span >{{ session.formateur }}</span>
                         </li>
                         <li class="list-group-item">
-                            <strong>Date début : </strong> <span id="description">{{session.dateDebut}} </span>
+                            <strong>Date début : </strong> <span id="description">{{session.dateD}} </span>
                         </li>
                         <li class="list-group-item">
-                            <strong>Date fin : </strong> <span id="chargeHoraire">{{session.dateFin}}</span>
+                            <strong>Date fin : </strong> <span id="chargeHoraire">{{session.dateF}}</span>
                         </li>
                     </ul>
                 </div>
               </div>
               <div class="card-footer">
-                  <a href="/formations/3" >Inscrire</a>
+                  <p (click)="inscrire(session.id! , login , confirm )" class="text-clicable" *ngIf="canInscrire(session.candidats)" >Inscrire</p>
                 <small class="text-muted"> Candidats : {{session.candidats.length}}/15</small>
               </div>
             </div>
@@ -81,8 +81,65 @@
     
     
     </ng-container>
-
-   
-
-      
  </div>
+
+
+
+<!-- interface login -->
+
+<ng-template #login let-modal>
+          
+    <div class="modal-content">
+      <div class="modal-header p-5 pb-4 border-bottom-0">
+        <h1 class="fw-bold mb-0 fs-2">Log-in</h1>
+        <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+      </div>
+    
+      <div class="modal-body p-5 pt-0">
+        
+        <form [formGroup]="formLogin" (ngSubmit)="connecter()">
+  
+          <small *ngIf="formerror" class="error-box mb-3 rounded-3">Email ou bien Password est incorrecte. <br> veuillez verifier vos données.</small> 
+  
+  
+          <div class="form-floating mb-3">
+            <input type="email" formControlName="email" class="form-control rounded-3" id="floatingInput" placeholder="name@example.com">
+            <label for="floatingInput">Email address</label>
+          </div>
+          <div class="form-floating mb-3">
+            <input type="password" formControlName="password" class="form-control rounded-3" id="floatingPassword" placeholder="Password">
+            <label for="floatingPassword">Password</label>
+          </div>
+          <button class="w-100 mb-2 btn btn-lg rounded-3 btn-primary" [disabled]="formLogin.invalid" type="submit">Log-in</button>
+  
+          
+  
+          <hr class="my-4">
+          <h2 class="fs-5 fw-bold mb-3">Or sign-up</h2>
+    
+          <button class="w-100 py-2 mb-2 btn btn-outline-secondary rounded-3" routerLink="/public/sign-up" (click)="modal.dismiss()" type="submit">
+            Sign up
+          </button>
+        </form>
+      </div>
+    </div> 
+  </ng-template>
+
+
+  <!-- inscrire -->
+<ng-template #confirm let-modal>
+
+    <div class="modal-dialog" role="document">
+      <div class="modal-content" >
+        <div class="modal-body p-4 text-center" >
+          <h5 class="mb-0"> {{ userName }} </h5>
+          <p class="mb-0"> Confirmez votre Inscription. </p>
+        </div>
+        <div class="modal-footer flex-nowrap p-0">
+          <button type="button" class="btn btn-lg btn-link fs-6 text-decoration-none col-6 py-3 m-0 rounded-0 border-end" (click)="confirmer()" ><strong>Oui, je confirme</strong></button>
+          <button type="button" class="btn btn-lg btn-link fs-6 text-decoration-none col-6 py-3 m-0 rounded-0" (click)="modal.close('Close click')" data-bs-dismiss="modal">Non</button>
+        </div>
+      </div>
+    </div>
+  
+  </ng-template>  

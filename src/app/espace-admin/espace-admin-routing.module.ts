@@ -7,12 +7,13 @@ import { AfficherSessionFormationComponent } from './sessionFormation/afficher-s
 import { AfficherFormateurComponent } from './formateur/afficher-formateur/afficher-formateur.component';
 import { AjouterFormationComponent } from './formation/ajouter-formation/ajouter-formation.component';
 import { EditerFormationComponent } from './formation/editer-formation/editer-formation.component';
-import { AjouterSessionFormationComponent } from './sessionFormation/ajouter-session-formation/ajouter-session-formation.component';
 import { EditerSessionFormationComponent } from './sessionFormation/editer-session-formation/editer-session-formation.component';
 import { AjouterFormateurComponent } from './formateur/ajouter-formateur/ajouter-formateur.component';
 import { EditerFormateurComponent } from './formateur/editer-formateur/editer-formateur.component';
 import { AjouterCandidatComponent } from './candidat/ajouter-candidat/ajouter-candidat.component';
 import { EditerCandidatComponent } from './candidat/editer-candidat/editer-candidat.component';
+import { AfficherFormationDemandeComponent } from './formation-demande/afficher-formation-demande/afficher-formation-demande.component';
+import { AjouterSessionComponent } from './sessionFormation/ajouter-session/ajouter-session.component';
 
 const routes: Routes = [
   {path : '' , component : ContainerComponent,
@@ -26,7 +27,7 @@ const routes: Routes = [
 
     // session
     {path : 'afficher-sessions' , component : AfficherSessionFormationComponent},
-    {path : 'ajouter-session' , component : AjouterSessionFormationComponent},
+    {path : 'ajouter-session' , component : AjouterSessionComponent},
     {path : 'editer-session/:id' , component : EditerSessionFormationComponent},
 
 
@@ -40,6 +41,9 @@ const routes: Routes = [
     {path : 'afficher-candidats' , component : AfficherCandidatsComponent},
     {path : 'ajouter-candidat' , component : AjouterCandidatComponent},
     {path : 'editer-candidat/:id' , component : EditerCandidatComponent},
+
+    //demande de formation
+    {path : 'afficher-formation-demande' , component : AfficherFormationDemandeComponent},
 
     // other
     {path : '**' , redirectTo : '/public/acceuil' , pathMatch : 'full' }

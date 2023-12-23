@@ -1,5 +1,7 @@
 import { Component, TemplateRef, inject } from '@angular/core';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { Formation } from 'src/app/Interfaces/formation';
+import { FormationService } from 'src/app/Services/formation.service';
 
 @Component({
   selector: 'app-afficher-formation',
@@ -8,6 +10,11 @@ import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 })
 export class AfficherFormationComponent {
 
+  constructor(private formationServ : FormationService){}
+  formations !: Formation[] ;
+  formationDetail !:Formation ;
+
+  
 
 
   // pop up view
@@ -18,5 +25,29 @@ export class AfficherFormationComponent {
   }
 
   //////////////////////////////////////////////////////////////////
+  ngOnInit(): void {
+
+    this.formationServ.getFormations().subscribe(
+      {next : (formations) =>  { this.formations = formations  } }
+    )
+      
+  }
+
+  opendetail(content: TemplateRef<any> , formation : Formation){
+    this.formationDetail = formation;
+    this.openPopup(content);
+  }
+
+
+  // supprimer(){
+
+  //   this.formationServ.(this.formationDetail.id!).subscribe(
+  //     {next : () => {
+  //       this.ngOnInit();
+  //       this.modalService.dismissAll();
+  //     }}
+  //   )
+
+  // }
 
 }

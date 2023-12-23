@@ -2,60 +2,79 @@
   <div class="row row-cols g-4 p-auto" >
 
    
-
-    <div class="col">
-        <div class="card h-100">
+<ng-container  *ngFor="let session of showSession">
+    <div class="col"  >
+       
+        <div class="card h-100"   (click)="opendetail(detail,session)">
           <div class="card-body">
-            <h5 class="card-title">Formation </h5>
+            <h5 class="card-title">Formation {{session.titreFormation}} </h5>
             <div class="card-text">
                 <ul class="list-group">            
                     <li class="list-group-item">
-                        <strong>Formateurs : </strong> <span >formateur</span>
+                        <strong>Formateurs : </strong> <span >{{ changeSpeToSt( session.nomFormateurs ) }}</span>
                     </li>
                     <li class="list-group-item">
-                        <strong>Date début : </strong> <span id="description">date</span>
+                        <strong>Date début : </strong> <span id="description">{{session.dateDebut}}</span>
                     </li>
                     <li class="list-group-item">
-                        <strong>Date fin : </strong> <span id="chargeHoraire">date</span>
+                        <strong>Date fin : </strong> <span id="chargeHoraire">{{session.dateFin}}</span>
                     </li>
-                    <li class="list-group-item">
-                        <strong>Planning : </strong> <span id="chargeHoraire">planning</span>
+                    <li class="list-group-item" style="display: block;">
+                        <strong>Planning : </strong> <br> <ul  *ngFor="let plan of session.planningSeances" ><li><span>{{plan}}</span></li></ul> 
                     </li>
                 </ul>
             </div>
           </div>
           <div class="card-footer">
-            <small class="text-muted">Membres : /15</small>
+            <small class="text-muted">Membres : {{session.candidats.length}}/15</small>
           </div>
         </div>
       </div>
-
-      <div class="col">
-        <div class="card h-100">
-          <div class="card-body">
-            <h5 class="card-title">Formation </h5>
-            <div class="card-text">
-                <ul class="list-group">            
-                    <li class="list-group-item">
-                        <strong>Formateurs : </strong> <span >formateur</span>
-                    </li>
-                    <li class="list-group-item">
-                        <strong>Date début : </strong> <span id="description">date</span>
-                    </li>
-                    <li class="list-group-item">
-                        <strong>Date fin : </strong> <span id="chargeHoraire">date</span>
-                    </li>
-                    <li class="list-group-item">
-                        <strong>Planning : </strong> <span id="chargeHoraire">planning</span>
-                    </li>
-                </ul>
-            </div>
-          </div>
-          <div class="card-footer">
-            <small class="text-muted">Membres : /15</small>
-          </div>
-        </div>
-      </div>
+    </ng-container>
+    
 
       
  </div>
+
+ <!-- details -->
+
+<ng-template #detail let-modal>
+
+  <div class="modal-content">
+    <div class="modal-header p-5 pb-4 border-bottom-0">
+      <h1 class="fw-bold mb-0 fs-2">Session Details</h1>
+      <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+    </div>
+  
+    <div class="modal-body p-5 pt-0">
+      
+      <ul class="list-group">
+        <li class="list-group-item">
+            <strong>ID : </strong> <span id="id">{{sessionDetail.id}}</span>
+        </li>
+        <li class="list-group-item">
+            <strong>titreFormation : </strong> <span id="titreFormation">{{sessionDetail.titreFormation}}</span>
+        </li>
+        <li class="list-group-item">
+            <strong>formateurs : </strong> <span id="formateurs">{{sessionDetail.nomFormateurs}}</span>
+        </li>
+        <li class="list-group-item">
+            <strong>candidats : </strong> <span id="candidats">{{sessionDetail.nomCandidats}}</span>
+        </li>
+        <li class="list-group-item">
+            <strong>dateDebut : </strong> <span id="dateDebut">{{sessionDetail.dateDebut}}</span>
+        </li>
+        <li class="list-group-item">
+            <strong>dateFin : </strong> <span id="dateFin">{{sessionDetail.dateFin}}</span>
+        </li>
+        <li class="list-group-item">
+            <strong>planningSeances : </strong> <br> <ul> <li *ngFor="let plan of sessionDetail.planningSeances" > <span id="planningSeances">{{plan}}</span>  </li></ul>
+        </li>
+        
+        
+        
+    </ul>
+    </div>
+  </div> 
+
+</ng-template>

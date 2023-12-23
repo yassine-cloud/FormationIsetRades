@@ -1,7 +1,7 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Session } from '../Interfaces/session';
-import { Subject, catchError, map, tap } from 'rxjs';
+import { Observable, Subject, catchError, map, tap } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -61,16 +61,32 @@ export class SessionService {
       }),
       catchError(error => {
         console.error('Error fetching sessions:', error);
-        return [];
+        throw error ;
       })
     );
   }
 
 
-  ajouterCandidat(id : string , session : Session , idCandidat : string){
-    session.candidats.push(+idCandidat);
-    this.updateSession(id,session);
+  // ajouterCandidat2(id : string , session : Session , idCandidat : string){
+  //   session.candidats.push(+idCandidat);
+  //   this.updateSession(id,session);
 
+  // }
+
+  ajouterCandidat(id : string ,  idCandidat : string) : Observable<boolean> {
+    return this.getSessionsById(id).pipe(
+      map( session => {
+        session.candidats.push(+idCandidat); 
+        this.http.put<Session>(`${this.url}/${id}`, session).subscribe(session => {console.log(session) ;} )
+        return true;
+      } ),
+      catchError(error => {
+        console.error('Error fetching sessions:', error);
+        throw error;
+      })
+    )
+    
+    
   }
 
 
@@ -89,7 +105,8 @@ export class SessionService {
  
 
   updateSession(id: string, session: Session) {
-    return this.http.put<Session>(`${this.url}/${id}`, session).pipe(
+
+    return this.http.put<Session>(`${this.url}/${id}`, session)/*.pipe(
       tap(sessionEdited => {
         this.sessions.map(s => (s.id===sessionEdited.id ? sessionEdited : s )  ); 
         this.sessionsArrayEdited.next([...this.sessions]);
@@ -98,11 +115,11 @@ export class SessionService {
         console.error('Error fetching sessions:', error);
         throw error;
       })
-    );
+    );*/
   }
 
 
-  deleteSession(id: string) {
+  deleteSession(id: number) {
     return this.http.delete<Session>(`${this.url}/${id}`).pipe(
       tap(sessionDeleted => {
         this.sessions.filter(s => s.id!==sessionDeleted.id   ); 

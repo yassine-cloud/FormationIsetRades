@@ -1,1 +1,38 @@
-<p>editer-candidat works!</p>
+<form  [formGroup]="formCandidat" (ngSubmit)="editerCandidat()"  >
+
+    <h2>Ajouter Candidat</h2>
+      <div class="form-floating mb-3">
+        <input type="text" id="nom" name="nom" formControlName="nom" class="form-control rounded-3" placeholder="nom">
+        <label for="nom" style="color: grey;">Nom</label>
+      </div>
+    
+      <div class="form-floating mb-3">
+        <input type="text" id="prenom" name="prenom" placeholder="prenom" formControlName="prenom" class=" form-control rounded-3" >
+        <label for="prenom">Prenom</label>
+      </div>
+    
+      <div class="form-floating mb-3">
+        <input type="text" id="numeroCarteIdentite" name="numeroCarteIdentite" placeholder="numeroCarteIdentite" formControlName="cin"  class="form-control rounded-3" >
+        <label for="numeroCarteIdentite">Numero Carte Identite</label>
+      </div>
+  
+      <div class="form-floating mb-3">
+        <input type="email" id="email" name="email" placeholder="email" formControlName="email" class=" form-control rounded-3" >
+        <label for="email">Email</label>
+      </div>
+    
+      <!-- <div class="form-floating mb-3">
+        <input type="password" id="motDePasse" name="motDePasse" placeholder="motDePasse" formControlName="password" class=" form-control rounded-3" >
+        <label for="motDePasse">Mot de Passe</label>
+      </div>
+  
+      <div class="form-floating mb-3">
+        <input type="password" id="motDePasse2" name="motDePasse2" placeholder="motDePasse2" formControlName="confirmPassword" class=" form-control rounded-3" >
+        <label for="motDePasse2">Reécrivez Mot de Passe</label>
+      </div> -->
+    
+      <button type="submit" class="btn form-control btn-success mt-3" [disabled]="formCandidat.invalid" style="max-width: 500px;" >Submit</button>
+    
+  
+  
+  </form>

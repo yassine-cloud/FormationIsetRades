@@ -1,0 +1,76 @@
+<h2>Liste des demandes</h2>
+
+<div class="table-responsives-md">
+
+<table class="table table-striped ">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">objet</th>
+      <th scope="col">Details</th>
+      <th scope="col">Supprimer</th>
+
+
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let formation of formations">
+      <td>{{formation.id}}</td>
+      <td>{{formation.objet}}</td>
+
+      <td><button class="btn btn-primary" (click)="opendetail(detail,formation)">Details</button></td>
+      <td><button class="btn btn-danger" (click)="opendetail(supp,formation)" >Supprimer</button></td>
+
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+<!-- details -->
+
+<ng-template #detail let-modal>
+
+  <div class="modal-content">
+    <div class="modal-header p-5 pb-4 border-bottom-0">
+      <h1 class="fw-bold mb-0 fs-2">Details</h1>
+      <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+    </div>
+  
+    <div class="modal-body p-5 pt-0">      
+      <ul class="list-group">        
+        <li class="list-group-item">
+            <strong>ID : </strong> <span id="id">{{formationDetail.id}}</span>
+        </li>
+        <li class="list-group-item">
+            <strong>objet : </strong> <span id="CIN">{{formationDetail.objet}}</span>
+        </li>
+        <li class="list-group-item">
+            <strong>explication : </strong> <span id="Nom">{{formationDetail.explication}}</span>
+        </li>
+        
+        
+    </ul>
+    </div>
+  </div> 
+
+</ng-template>
+
+
+<!-- Supprimmer F -->
+<ng-template #supp let-modal>
+
+    <div class="modal-dialog" role="document">
+      <div class="modal-content" >
+        <div class="modal-body p-4 text-center" >
+          <h5 class="mb-0"> Confirmez La suppression Du {{formationDetail.objet}} . </h5>
+        </div>
+        <div class="modal-footer flex-nowrap p-0">
+          <button type="button" class="btn btn-lg btn-link fs-6 text-decoration-none col-6 py-3 m-0 rounded-0 border-end" (click)="supprimer()"><strong>Oui, je confirme</strong></button>
+          <button type="button" class="btn btn-lg btn-link fs-6 text-decoration-none col-6 py-3 m-0 rounded-0" (click)="modal.close('Close click')" data-bs-dismiss="modal">Non</button>
+        </div>
+      </div>
+    </div>
+  
+  </ng-template>  
+  
