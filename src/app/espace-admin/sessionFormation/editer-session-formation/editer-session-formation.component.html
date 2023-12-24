@@ -2,7 +2,7 @@
 
 <form [formGroup]="form" (ngSubmit)="editerSession()"  >
 
-    <h2>Ajouter Une Session</h2>
+    <h2>Editer Une Session</h2>
 
     <div class="input-group form-control my-3">
         <label for="formation" class="input-group-text" >Formation:</label>
@@ -46,7 +46,6 @@
               </div>
       
       <div  class="form-floating mb-3">
-        <span class="remarque">Séparrer les planning par une virgule ( , )</span>
         <input type="text" id="planningSeances" name="planningSeances" placeholder="planningSeances" formControlName="planningSeances" class=" form-control rounded-3" >
         <label for="planningSeances">planning Seances :</label>
         <span class="remarque">Séparrer les planning par une virgule ( , )</span><br>

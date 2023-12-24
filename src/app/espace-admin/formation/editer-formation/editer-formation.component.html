@@ -46,6 +46,9 @@
       class="form-control"
     />
     <label for="programme">programme:</label>
+    <span class="remarque">Séparrer chaque programme par une virgule ( , )</span><br>
+        <span class="error" *ngIf="form.get('programme')?.value=='' && form.get('programme')?.touched ">Les programmes sont obligatoire <br></span>
+        <span class="error" *ngIf="form.get('programme')?.invalid && form.get('programme')?.touched">Les programmes doivent être separée par une ( , )</span>
   </div>
 
   <div class="form-floating mb-3">

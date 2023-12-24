@@ -25,10 +25,10 @@ export class EditerFormationComponent {
     titre: ["",Validators.required] , 
     description: ["",Validators.required],
     chargeHoraire: ["",[Validators.required]],
-    programme: ["",Validators.required],
+    programme: ["",[Validators.required,Validators.pattern("[^,]+(,[^,]+)*")]],
     niveau:["",Validators.required],
-    motsCles: ["",[Validators.required,Validators.pattern("[ a-zA-Z0-9]+(,[ a-zA-Z0-9]+)*")]],
-    categories: ["",[Validators.required,Validators.pattern("[ a-zA-Z0-9]+(,[ a-zA-Z0-9]+)*")]],
+    motsCles: ["",[Validators.required,Validators.pattern("[^,]+(,[^,]+)*")]],
+    categories: ["",[Validators.required,Validators.pattern("[^,]+(,[^,]+)*")]],
     img : ["", [Validators.required]]
   });
   
@@ -47,10 +47,10 @@ export class EditerFormationComponent {
           titre: [this.registreFormation.titre,Validators.required] , 
           description: [this.registreFormation.description,Validators.required],
           chargeHoraire: [this.registreFormation.chargeHoraire,[Validators.required]],
-          programme: [this.registreFormation.programme,Validators.required],
+          programme: [this.registreFormation.programme,[Validators.required,Validators.pattern("[^,]+(,[^,]+)*")]],
           niveau:[this.registreFormation.niveau,Validators.required],
-          motsCles: [ this.formationService.changeSpeToSt( this.registreFormation.motsCles ) ,[Validators.required,Validators.pattern("[ a-zA-Z0-9]+(,[ a-zA-Z0-9]+)*")]],
-          categories: [ this.formationService.changeSpeToSt( this.registreFormation.categories ) ,[Validators.required,Validators.pattern("[ a-zA-Z0-9]+(,[ a-zA-Z0-9]+)*")]],
+          motsCles: [ this.formationService.changeSpeToSt( this.registreFormation.motsCles ) ,[Validators.required,Validators.pattern("[^,]+(,[^,]+)*")]],
+          categories: [ this.formationService.changeSpeToSt( this.registreFormation.categories ) ,[Validators.required,Validators.pattern("[^,]+(,[^,]+)*")]],
           img : [this.registreFormation.img, [Validators.required]]
         })
       }

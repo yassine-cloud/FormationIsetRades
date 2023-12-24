@@ -22,10 +22,10 @@ ngOnInit(): void {
     titre: ["",Validators.required] , 
     description: ["",Validators.required],
     chargeHoraire: ["",[Validators.required]],
-    programme: ["",Validators.required],
+    programme: ["",[Validators.required,Validators.pattern("[^,]+(,[^,]+)*")]],
     niveau:["",Validators.required],
-    motsCles: ["",[Validators.required,Validators.pattern("[ a-zA-Z0-9]+(,[ a-zA-Z0-9]+)*")]],
-    categories: ["",[Validators.required,Validators.pattern("[ a-zA-Z0-9]+(,[ a-zA-Z0-9]+)*")]],
+    motsCles: ["",[Validators.required,Validators.pattern("[^,]+(,[^,])*")]],
+    categories: ["",[Validators.required,Validators.pattern("[^,]+(,[^,]+)*")]],
     img : ["", [Validators.required]]
   });
 }
